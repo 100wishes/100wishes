@@ -24,5 +24,13 @@ Class AdminController extends MainController {
 		$content = $this->showview('admin_hospitals', $arrData);
 		include('templates/admin.php');
 	}
+
+	public function users() {
+		$this->checkUser();
+		$arrData['users'] = GetUsers::usersAdminList();
+
+		$content = $this->showview('admin_users', $arrData);
+		include('templates/admin.php');
+	}
 }
 ?>

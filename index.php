@@ -7,6 +7,7 @@ include("controllers/adminController.php");
 include("models/getNav.php");
 include("models/getPage.php");
 include("models/getHospitals.php");
+include("models/getUsers.php");
 
 session_start();
 

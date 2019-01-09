@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 19, 2018 at 04:57 PM
+-- Generation Time: Jan 08, 2019 at 10:45 PM
 -- Server version: 5.6.41-84.1
 -- PHP Version: 5.6.30
 
@@ -346,15 +346,17 @@ CREATE TABLE `hospitals` (
   `strCity` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `strPostalCode` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `strAddress` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `strEmail` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `strEmail` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `strPhoto` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `hospitals`
 --
 
-INSERT INTO `hospitals` (`id`, `strName`, `nKids`, `nPhone`, `strBio`, `nProvinceID`, `strCity`, `strPostalCode`, `strAddress`, `strEmail`) VALUES
-(1, 'BC Children\'s Hospital', 3524, '(604) 875 3003', 'BC Children’s Hospital is a leader in general and specialized pediatric services, and is the province’s foremost teaching and research facility for child health.', 664, 'Vancouver', 'V6B 1Y1', '570 Dunsmuir St.', 'contact@bcchildrens.ca');
+INSERT INTO `hospitals` (`id`, `strName`, `nKids`, `nPhone`, `strBio`, `nProvinceID`, `strCity`, `strPostalCode`, `strAddress`, `strEmail`, `strPhoto`) VALUES
+(1, 'BC Children\'s Hospital', 3524, '(604) 875 3003', 'BC Children’s Hospital is a leader in general and specialized pediatric services, and is the province’s foremost teaching and research facility for child health.', 664, 'Vancouver', 'V6B 1Y1', '570 Dunsmuir St.', 'contact@bcchildrens.ca', 'bchildrenshospital.png'),
+(3, 'No Hospital', 0, '2223334444', '', 664, 'Vancouver', '', '', 'admin@admin.com', '');
 
 -- --------------------------------------------------------
 
@@ -4559,6 +4561,13 @@ CREATE TABLE `users` (
   `nWishes` smallint(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `strEmail`, `strPassword`, `strFirstName`, `strLastName`, `nPhone`, `nProvinceID`, `strCity`, `nWishes`) VALUES
+(1, 'gmaoki@yahoo.com.br', '123', 'Gabrielle', 'Aoki', '2367776619', 664, 'Vancouver', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -4581,7 +4590,8 @@ CREATE TABLE `users_cms` (
 --
 
 INSERT INTO `users_cms` (`id`, `strFirstName`, `strLastName`, `nPhone`, `strEmail`, `strPassword`, `nHospitalID`, `bAdmin`) VALUES
-(1, 'Gabrielle', 'Aoki', '(604) 555 2222', 'gmaoki@yahoo.com.br', '123', 1, 1);
+(1, 'Gabrielle', 'Aoki', '(604) 555 2222', 'gmaoki@yahoo.com.br', '123', 1, 0),
+(3, 'Admin', '', '2223334444', 'admin@admin.com', '123', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -4593,15 +4603,16 @@ CREATE TABLE `wishes` (
   `id` mediumint(50) NOT NULL,
   `strWish` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `nStatusID` tinyint(4) NOT NULL,
-  `nHospitalID` mediumint(50) NOT NULL
+  `nHospitalID` mediumint(50) NOT NULL,
+  `nUserID` mediumint(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `wishes`
 --
 
-INSERT INTO `wishes` (`id`, `strWish`, `nStatusID`, `nHospitalID`) VALUES
-(1, 'A photo with Spider Man', 3, 1);
+INSERT INTO `wishes` (`id`, `strWish`, `nStatusID`, `nHospitalID`, `nUserID`) VALUES
+(1, 'A photo with Spider Man', 3, 1, 0);
 
 --
 -- Indexes for dumped tables
@@ -4699,7 +4710,7 @@ ALTER TABLE `globals`
 -- AUTO_INCREMENT for table `hospitals`
 --
 ALTER TABLE `hospitals`
-  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -4723,13 +4734,13 @@ ALTER TABLE `status`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users_cms`
 --
 ALTER TABLE `users_cms`
-  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `wishes`
