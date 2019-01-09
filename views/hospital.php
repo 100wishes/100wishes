@@ -1,4 +1,5 @@
 <h1><?=$arrData['hospital']['strName']?></h1>
+<img src="assets/<?=$arrData['hospital']['strPhoto']?>" alt="<?=$arrData['hospital']['strName']?>" />
 <p><?=$arrData['hospital']['strBio']?></p>
 <p>Kids: <?=$arrData['hospital']['nKids']?></p>
 <p>Phone: <?=$arrData['hospital']['nPhone']?></p>

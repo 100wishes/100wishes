@@ -8,5 +8,18 @@ Class MainController {
 
 		return $content;
 	}
+
+	public function checkUser() {
+		if (!isset($_SESSION["userID"])) 
+		{
+			header("location: index.php?controller=admin&action=login&error=true");
+			die;
+		}
+	}
+
+	public function logout() {
+		session_start();
+		session_destroy();
+	}
 }
 ?>
