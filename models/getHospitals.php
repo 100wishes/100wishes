@@ -1,7 +1,7 @@
 <?php
 Class GetHospitals {
 	static function makeList() {
-		$sql = "SELECT hospitals.id, hospitals.strName, hospitals.strPhoto, hospitals.strCity, states.strName AS province FROM hospitals LEFT JOIN states ON hospitals.nProvinceID = states.id";
+		$sql = "SELECT hospitals.id, hospitals.strName, hospitals.strPhoto, hospitals.strCity, states.strName AS province FROM hospitals LEFT JOIN states ON hospitals.nProvinceID = states.id WHERE hospitals.id <> 3";
 		return DBFactory::newData()->runSql("getData", $sql);
 	}
 

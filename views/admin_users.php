@@ -1,10 +1,10 @@
-<a href="#">Add a User</a>
+<a href="index.php?controller=admin&action=add">Add a User</a>
 <h1>List of Users</h1>
 <?php
 foreach($arrData['users'] as $user) {
 ?>
-	<p><?=$user['strFirstName']?> <?=$user['strLastName']?> (<a class="hID-<?=$user['nHospitalID']?>" href="#"><?=$user['hospitalName']?></a>)</p>
-	<a href="#">Edit</a>
-	<a href="#">Delete</a>
+	<p><?=$user['strFirstName']?> <?=$user['strLastName']?> (<?=$user['hospitalName']?>)</p>
+	<a href="index.php?controller=admin&action=add&uID=<?=$user['id']?>">Edit</a>
+	<a href="index.php?controller=admin&action=add&uID=<?=$user['id']?>">Delete</a>
 <?php
 }

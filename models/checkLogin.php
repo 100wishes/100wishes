@@ -21,6 +21,7 @@ if($arrUsers)
 {
 	session_start();
 	$_SESSION["userID"] = $arrUsers[0]["id"];
+	$_SESSION["hospitalID"] = $arrUsers[0]["nHospitalID"];
 	$_SESSION["bAdmin"] = $arrUsers[0]["bAdmin"];
 	echo true;
 }
