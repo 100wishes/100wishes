@@ -11,7 +11,7 @@ Class GetUsers {
 	}
 
 	static function getOneUser($userID) {
-		$sql = "SELECT users_cms.*, hospitals.id, hospitals.strName FROM users_cms LEFT JOIN hospitals ON users_cms.nHospitalID = hospitals.id where users_cms.id = ".$userID;
+		$sql = "SELECT users_cms.*, hospitals.id, hospitals.strName AS hospitalName FROM users_cms LEFT JOIN hospitals ON users_cms.nHospitalID = hospitals.id where users_cms.id = ".$userID;
 		return DBFactory::newData()->runSql("getData", $sql);
 	}
 
@@ -21,7 +21,7 @@ Class GetUsers {
 	}
 
 	static function getOneClient($cID) {
-		$sql = "SELECT users.*, states.strName FROM users_cms LEFT JOIN hospitals ON users_cms.nHospitalID = hospitals.id where users_cms.id = ".$cID;
+		$sql = "SELECT users.*, states.id AS strProvince FROM users LEFT JOIN states ON users.nProvinceID = states.id where users.id = ".$cID;
 		return DBFactory::newData()->runSql("getData", $sql);
 	}
 }
