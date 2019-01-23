@@ -1,7 +1,7 @@
 <?php
 	if($_SESSION["bAdmin"] === "1") {
 ?>
-	<a href="index.php?controller=admin&action=add">Add a hospital</a>
+	<a href="index.php?controller=admin&action=add&hID=0">Add a hospital</a>
 <?php
 	}
 ?>

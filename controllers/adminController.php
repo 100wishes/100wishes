@@ -71,6 +71,10 @@ Class AdminController extends MainController {
 		if(isset($_GET['uID'])) {
 			$arrData['user'] = GetUsers::getOneUser($_GET['uID']);
 		}
+
+		if(isset($_GET['hID'])) {
+			$arrData['hospitalInfo'] = GetHospitals::getOneHospital($_GET['hID']);
+		}
 		
 		$content = $this->showview('admin_add', $arrData);
 		include('templates/admin.php');
@@ -79,13 +83,18 @@ Class AdminController extends MainController {
 	public function delete() {
 		$this->checkUser();
 		if(isset($_GET['cID'])) {
-			$arrData['client'] = Delete::deleteClient($_GET['cID']);
+			Delete::deleteClient($_GET['cID']);
 			header("location: index.php?controller=admin&action=clients&delete=true");
 		}
 
 		if(isset($_GET['uID'])) {
-			$arrData['client'] = Delete::deleteUser($_GET['uID']);
+			Delete::deleteUser($_GET['uID']);
 			header("location: index.php?controller=admin&action=users&delete=true");
+		}
+
+		if(isset($_GET['hID'])) {
+			Delete::deleteHospital($_GET['hID']);
+			header("location: index.php?controller=admin&action=hospitals&delete=true");
 		}
 	}
 
@@ -99,6 +108,11 @@ Class AdminController extends MainController {
 		if(isset($_GET['uID'])) {
 			$arrData['user'] = Save::saveUser($_GET['uID']);
 			header("location: index.php?controller=admin&action=users&save=true");
+		}
+
+		if(isset($_GET['hID'])) {
+			$arrData['hospitalInfo'] = Save::saveHospital($_GET['hID']);
+			header("location: index.php?controller=admin&action=hospitals&save=true");
 		}
 	}
 }
