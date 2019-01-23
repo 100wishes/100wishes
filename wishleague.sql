@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jan 08, 2019 at 10:45 PM
--- Server version: 5.6.41-84.1
--- PHP Version: 5.6.30
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jan 23, 2019 at 06:22 AM
+-- Server version: 5.7.21
+-- PHP Version: 7.1.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `goki_wishleague`
+-- Database: `wishleague`
 --
 
 -- --------------------------------------------------------
@@ -28,13 +28,15 @@ SET time_zone = "+00:00";
 -- Table structure for table `contacts`
 --
 
-CREATE TABLE `contacts` (
-  `id` mediumint(50) NOT NULL,
+DROP TABLE IF EXISTS `contacts`;
+CREATE TABLE IF NOT EXISTS `contacts` (
+  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
   `strName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `strEmail` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `nPhone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `strMessage` text COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `strMessage` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `contacts`
@@ -49,10 +51,12 @@ INSERT INTO `contacts` (`id`, `strName`, `strEmail`, `nPhone`, `strMessage`) VAL
 -- Table structure for table `countries`
 --
 
-CREATE TABLE `countries` (
-  `id` mediumint(50) NOT NULL,
-  `strName` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+DROP TABLE IF EXISTS `countries`;
+CREATE TABLE IF NOT EXISTS `countries` (
+  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
+  `strName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=247 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `countries`
@@ -312,11 +316,13 @@ INSERT INTO `countries` (`id`, `strName`) VALUES
 -- Table structure for table `globals`
 --
 
-CREATE TABLE `globals` (
-  `id` tinyint(4) NOT NULL,
+DROP TABLE IF EXISTS `globals`;
+CREATE TABLE IF NOT EXISTS `globals` (
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `strName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `strValue` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `strValue` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `globals`
@@ -336,8 +342,9 @@ INSERT INTO `globals` (`id`, `strName`, `strValue`) VALUES
 -- Table structure for table `hospitals`
 --
 
-CREATE TABLE `hospitals` (
-  `id` mediumint(50) NOT NULL,
+DROP TABLE IF EXISTS `hospitals`;
+CREATE TABLE IF NOT EXISTS `hospitals` (
+  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
   `strName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `nKids` smallint(50) NOT NULL,
   `nPhone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -347,8 +354,10 @@ CREATE TABLE `hospitals` (
   `strPostalCode` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `strAddress` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `strEmail` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `strPhoto` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `strPhoto` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `nProvinceID` (`nProvinceID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `hospitals`
@@ -364,13 +373,15 @@ INSERT INTO `hospitals` (`id`, `strName`, `nKids`, `nPhone`, `strBio`, `nProvinc
 -- Table structure for table `pages`
 --
 
-CREATE TABLE `pages` (
-  `id` tinyint(4) NOT NULL,
+DROP TABLE IF EXISTS `pages`;
+CREATE TABLE IF NOT EXISTS `pages` (
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `strNav` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `strMainTitle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `strMainContent` text COLLATE utf8_unicode_ci NOT NULL,
-  `bMainPage` tinyint(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `bMainPage` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `pages`
@@ -382,7 +393,8 @@ INSERT INTO `pages` (`id`, `strNav`, `strMainTitle`, `strMainContent`, `bMainPag
 (3, 'About', 'About Title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 1),
 (4, 'Contact', 'Contact Title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 1),
 (5, 'Hospital', 'One Hospital Title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 0),
-(6, 'Policy', 'Policy Title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 1);
+(6, 'Log In', 'Log In Title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 0),
+(7, 'Profile', 'Profile Title', '', 0);
 
 -- --------------------------------------------------------
 
@@ -390,11 +402,14 @@ INSERT INTO `pages` (`id`, `strNav`, `strMainTitle`, `strMainContent`, `bMainPag
 -- Table structure for table `states`
 --
 
-CREATE TABLE `states` (
-  `id` mediumint(50) NOT NULL,
+DROP TABLE IF EXISTS `states`;
+CREATE TABLE IF NOT EXISTS `states` (
+  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
   `strName` varchar(255) NOT NULL,
-  `nCountryID` mediumint(50) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `nCountryID` mediumint(50) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`),
+  KEY `country_id` (`nCountryID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4121 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `states`
@@ -4529,10 +4544,12 @@ INSERT INTO `states` (`id`, `strName`, `nCountryID`) VALUES
 -- Table structure for table `status`
 --
 
-CREATE TABLE `status` (
-  `id` tinyint(4) NOT NULL,
-  `strName` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+DROP TABLE IF EXISTS `status`;
+CREATE TABLE IF NOT EXISTS `status` (
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `strName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `status`
@@ -4549,8 +4566,9 @@ INSERT INTO `status` (`id`, `strName`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
-  `id` mediumint(50) NOT NULL,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
   `strEmail` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `strPassword` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `strFirstName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -4558,8 +4576,10 @@ CREATE TABLE `users` (
   `nPhone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `nProvinceID` mediumint(50) NOT NULL,
   `strCity` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `nWishes` smallint(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `nWishes` smallint(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `nProvinceID` (`nProvinceID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `users`
@@ -4574,16 +4594,19 @@ INSERT INTO `users` (`id`, `strEmail`, `strPassword`, `strFirstName`, `strLastNa
 -- Table structure for table `users_cms`
 --
 
-CREATE TABLE `users_cms` (
-  `id` mediumint(50) NOT NULL,
+DROP TABLE IF EXISTS `users_cms`;
+CREATE TABLE IF NOT EXISTS `users_cms` (
+  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
   `strFirstName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `strLastName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `nPhone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `strEmail` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `strPassword` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `nHospitalID` mediumint(50) NOT NULL,
-  `bAdmin` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `bAdmin` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `nHospitalID` (`nHospitalID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `users_cms`
@@ -4599,13 +4622,17 @@ INSERT INTO `users_cms` (`id`, `strFirstName`, `strLastName`, `nPhone`, `strEmai
 -- Table structure for table `wishes`
 --
 
-CREATE TABLE `wishes` (
-  `id` mediumint(50) NOT NULL,
+DROP TABLE IF EXISTS `wishes`;
+CREATE TABLE IF NOT EXISTS `wishes` (
+  `id` mediumint(50) NOT NULL AUTO_INCREMENT,
   `strWish` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `nStatusID` tinyint(4) NOT NULL,
   `nHospitalID` mediumint(50) NOT NULL,
-  `nUserID` mediumint(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `nUserID` mediumint(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `nHospitalID` (`nHospitalID`),
+  KEY `nStatusID` (`nStatusID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `wishes`
@@ -4613,140 +4640,6 @@ CREATE TABLE `wishes` (
 
 INSERT INTO `wishes` (`id`, `strWish`, `nStatusID`, `nHospitalID`, `nUserID`) VALUES
 (1, 'A photo with Spider Man', 3, 1, 0);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `contacts`
---
-ALTER TABLE `contacts`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `countries`
---
-ALTER TABLE `countries`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `globals`
---
-ALTER TABLE `globals`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `hospitals`
---
-ALTER TABLE `hospitals`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `nProvinceID` (`nProvinceID`);
-
---
--- Indexes for table `pages`
---
-ALTER TABLE `pages`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `states`
---
-ALTER TABLE `states`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `country_id` (`nCountryID`);
-
---
--- Indexes for table `status`
---
-ALTER TABLE `status`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `nProvinceID` (`nProvinceID`);
-
---
--- Indexes for table `users_cms`
---
-ALTER TABLE `users_cms`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `nHospitalID` (`nHospitalID`);
-
---
--- Indexes for table `wishes`
---
-ALTER TABLE `wishes`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `nHospitalID` (`nHospitalID`),
-  ADD KEY `nStatusID` (`nStatusID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `contacts`
---
-ALTER TABLE `contacts`
-  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `countries`
---
-ALTER TABLE `countries`
-  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
-
---
--- AUTO_INCREMENT for table `globals`
---
-ALTER TABLE `globals`
-  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `hospitals`
---
-ALTER TABLE `hospitals`
-  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `pages`
---
-ALTER TABLE `pages`
-  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `states`
---
-ALTER TABLE `states`
-  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4121;
-
---
--- AUTO_INCREMENT for table `status`
---
-ALTER TABLE `status`
-  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `users_cms`
---
-ALTER TABLE `users_cms`
-  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `wishes`
---
-ALTER TABLE `wishes`
-  MODIFY `id` mediumint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables

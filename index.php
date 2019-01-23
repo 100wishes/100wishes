@@ -12,7 +12,7 @@ include("models/getUsers.php");
 session_start();
 
 $controller = (isset($_GET["controller"]))?$_GET["controller"]:"pages";
-$action = (isset($_GET["action"]))?$_GET["action"]:"login";
+$action = (isset($_GET["action"]))?$_GET["action"]:"profile";
 
 $cName = ucfirst($controller)."Controller";
 $oController = new $cName();

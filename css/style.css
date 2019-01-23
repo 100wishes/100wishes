@@ -466,5 +466,70 @@ p.introHeading {
 	color: #ff8500; /*orange*/
 }
 
-
 /*-- End of Login --*/
+
+
+/*-- Start of Profile --*/
+
+#profile {
+	margin: 0 auto;
+	margin-top: 30px;
+	height: 1000px;
+	width: 600px;
+	max-width: 100%;
+}
+
+.profile-pic {
+	background: url("../assets/iconProfile.png");
+	border: 5px solid #ff8500; /*orange*/
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 200px;
+	height: 200px;
+	float: left;
+	display: inline-block;
+}
+
+.profile-info {
+	float: left;
+	display: inline-block;
+	margin-left: 40px;
+}
+
+#profile h2 {
+	font-size: 34pt;
+	font-weight: 700;
+	color: #378786 /*dark teal*/;
+	margin-bottom: 10px;
+}
+
+#profile p {
+	line-height: 25px;
+	color: #000;
+	font-size: 14pt;
+}
+
+#profile .label {
+	font-weight: 700;
+	color: #ff8500; /*orange*/
+}
+
+.primaryBtn {
+	color:#fff;
+	background:#ff8500 /*orange*/;
+	padding:15px 25px;
+	font-weight:700;
+	margin-top:40px;
+	border-radius:3px;
+	font-size:12pt;
+}
+
+.profile-info div:first-child {
+	margin-bottom: 30px;
+}
+
+
+/*-- End of Profile --*/
+
+
