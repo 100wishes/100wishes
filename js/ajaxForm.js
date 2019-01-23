@@ -48,6 +48,7 @@ $(function(){
 						window.location = "index.php?controller=admin&action=dashboard";
 					} else {
 						window.location = "index.php?controller=admin&action=login&error=true";
+						console.log(result);
 					}
 				},
 				error: function(result)

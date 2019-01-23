@@ -1,3 +1,10 @@
+<?php
+$delete = isset($_GET['delete'])?($_GET['delete']):false;
+
+if ($delete == true) {
+	echo "Client Deleted";
+}
+?>
 <h1>List of Clients</h1>
 <?php
 foreach($arrData['clients'] as $client) {

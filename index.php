@@ -8,6 +8,9 @@ include("models/getNav.php");
 include("models/getPage.php");
 include("models/getHospitals.php");
 include("models/getUsers.php");
+include("models/getProvince.php");
+include("models/delete.php");
+include("models/save.php");
 
 session_start();
 
