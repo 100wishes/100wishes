@@ -2,7 +2,7 @@
 	<ul>
 		<li><a href="index.php?controller=admin&action=dashboard">Dashboard</a></li>
 		<li><a href="index.php?controller=admin&action=users">Users</a></li>
-		<li><a href="index.php?controller=admin&action=wishes">Wishs</a></li>
+		<li><a href="index.php?controller=admin&action=wishes">Wishes</a></li>
 	<?php
 		if($_SESSION["bAdmin"] === "1") {
 	?>
