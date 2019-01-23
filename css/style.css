@@ -41,6 +41,7 @@ header {
 	top:0;
 	text-transform: lowercase;
 	text-align:center;
+	z-index: 9;
 }
 
 header > * {
@@ -159,6 +160,11 @@ footer #socialNav .fab:hover {
 }
 
 /*-- Start of Home --*/
+
+#home {
+	height: 1100px;
+}
+
 .homeHero {
 	background-image:url("../images/homeHero.png");
 	width:100%;
@@ -166,6 +172,7 @@ footer #socialNav .fab:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
+	margin-top: 70px;
 }
 
 .heroTextContainer {
@@ -220,18 +227,40 @@ p.introHeading {
 /*-- End of Home --*/
 
 
+/*-- Start of Small Hero --*/
+
+#smallHero {
+	margin-top: 170px;
+	height: 250px;
+	position: relative;
+}
+#smallHero img {
+	width: 100%;
+}
+
+#smallHero h2 {
+	font-size: 42pt;
+	position: absolute;
+	top: 75px;
+	left: 70px;
+	color: #fff;
+}
+
+
+/*-- End of Small Hero --*/
+
 
 /*-- Start of About --*/
 
-.aboutPar{
+.aboutPar {
 	width:900px;
 	max-width: 100%;
 	text-align:left;
 	margin:auto;
-	margin-top:90px;
+	margin-top:150px;
 }
 
-.aboutPar p{
+.aboutPar p {
 	font-size:25px;
 	line-height: 1.5em;
 	font-weight: 600;
@@ -250,9 +279,6 @@ p.introHeading {
 }
 
 /*-- End of About --*/
-
-
-
 
 
 /*-- Start of Contact --*/
@@ -332,12 +358,113 @@ p.introHeading {
 }
 
 .contactContainer {
-	height:700px;
+	height:900px;
 	width:800px;
 	max-width: 100%;
 	margin:auto;
-	margin-top:90px;
+	margin-top:150px;
 }
 
 
 /*-- End of Contact --*/
+
+
+/*-- Start of Login --*/
+
+
+.loginForm, .signUpForm {
+	border:2px solid #378786; /*dark teal*/
+	width:400px;
+	padding:30px;
+	border-radius:3px;
+	margin:auto;
+}
+
+.loginForm {
+	border:2px solid #ff8500; /*orange*/
+}
+
+.loginForm input[type='text'], .signUpForm input[type='text'] {
+	width:100%;
+	margin-bottom:30px;
+	max-width:100%;
+	border:none;
+	padding:10px;
+	border-bottom:2px solid #378786 /*dark teal*/;
+}
+
+.loginForm input[type='text'] {
+	border-bottom:2px solid #ff8500; /*orange*/
+}
+
+.loginForm label, .signUpForm label {
+	font-size:20px;
+	display:block;
+	margin-top:20px;
+	font-weight:600;
+}
+
+.loginForm label {
+	color: #ff8500; /*orange*/
+}
+
+.signUpForm .completeBtn {
+	border:none;
+	font-size:20px;
+	padding: 10px 40px;
+	border:2px solid #378786 /*dark teal*/;
+	background:#fff;
+	margin-bottom:20px;
+	font-weight:600;
+	border-radius:3px;
+	cursor: pointer;
+}
+
+.loginForm .completeBtn {
+	border:none;
+	font-size:20px;
+	padding: 10px 40px;
+	background:#fff;
+	margin-bottom:20px;
+	font-weight:600;
+	border-radius:3px;
+	cursor: pointer;
+	border: 2px solid #ff8500; /*orange*/
+	background: #ff8500; /*orange*/
+	color: #fff;
+}
+
+.loginForm .completeBtn:hover {
+	background: #fff;
+	color: #ff8500; /*orange*/
+	border:2px solid #ff8500; /*orange*/
+}
+
+.signUpForm .completeBtn:hover {
+	background:#378786 /*dark teal*/;
+	color:#fff;
+}
+
+.loginContainer {
+	height:750px;
+	width: 1200px;
+	max-width: 100%;
+	margin: auto;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.loginContainer h3 {
+	font-size: 24pt;
+	font-weight: 700;
+	margin-left: 100px;
+	margin-bottom: 10px;
+}
+
+.loginContainer .login h3 {
+	color: #ff8500; /*orange*/
+}
+
+
+/*-- End of Login --*/

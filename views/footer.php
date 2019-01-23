@@ -1,5 +1,26 @@
 	<footer>
-		<h1>Footer</h1>
+		<div class="footerCopyright">
+			<img src="images/iconStar.png" alt="iconStar" class="iconStar">
+
+			<div class="copyrightText">
+				<p>Copyright &copy; Wish League 2019</p>
+				<p>All Rights Reserved</p>
+			</div><!--copyrightText-->
+		</div><!--footerCopyright-->
+
+		<div id="socialNav">
+			<a href="https://www.facebook.com">
+				<span class="fab fa-facebook-f"></span>
+			</a>
+
+			<a href="https://www.twitter.com">
+				<span class="fab fa-twitter"></span>
+			</a>
+
+			<a href="https://www.instagram.com">
+				<span class="fab fa-instagram"></span>
+			</a>
+		</div><!--socialNav-->	
 	</footer>
 
 

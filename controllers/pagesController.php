@@ -48,12 +48,12 @@ Class PagesController extends MainController {
 		include('templates/pages.php');
 	}
 
-	public function policy() {
+	public function login() {
 		$pID = 6;
 		$arrData['nav'] = MainNav::makeNav();
 		$arrData['page'] = GetPage::getPageInfo($pID);
 
-		$content = $this->showview('policy', $arrData);
+		$content = $this->showview('login', $arrData);
 		include('templates/pages.php');
 	}
 }
