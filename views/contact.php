@@ -1,5 +1,9 @@
-<h1>Contact Page</h1>
-<p><?=$arrData['page']['strMainContent']?></p>
+<div id="smallHero">
+	<div class="smallHero-header">
+		<img src="assets/smallhero2.jpg"/>
+		<h2>Contact Us</h2>
+	</div><!-- //smallHero-header-->
+</div><!-- //smallHero-->
 
 <div class="contactContainer">
 	<div class="contact">

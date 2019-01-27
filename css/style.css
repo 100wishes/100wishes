@@ -362,7 +362,7 @@ p.introHeading {
 	width:800px;
 	max-width: 100%;
 	margin:auto;
-	margin-top:150px;
+	margin-top: 30px;
 }
 
 
@@ -474,7 +474,7 @@ p.introHeading {
 #profile {
 	margin: 0 auto;
 	margin-top: 30px;
-	height: 1000px;
+	height: 400px;
 	width: 600px;
 	max-width: 100%;
 }
@@ -516,13 +516,39 @@ p.introHeading {
 }
 
 .primaryBtn {
-	color:#fff;
-	background:#ff8500 /*orange*/;
-	padding:15px 25px;
-	font-weight:700;
-	margin-top:40px;
-	border-radius:3px;
-	font-size:12pt;
+	color: #fff;
+	background: #ff8500; /*orange*/
+	border: 2px solid #ff8500; /*orange*/
+	padding:10px 15px;
+	font-weight: 700;
+	margin-top: 40px;
+	border-radius: 3px;
+	font-size: 11pt;
+}
+
+.primaryBtn:hover {
+	color: #ff8500; /*orange*/
+	background: #fff;
+}
+
+.secondaryBtn {
+	color: #378786; /*dark teal*/
+	background: #fff;
+	border: 2px solid #378786; /*dark teal*/
+	padding: 10px 15px;
+	font-weight: 700;
+	margin-top: 40px;
+	border-radius: 3px;
+	font-size: 11pt;
+}
+
+.secondaryBtn:hover {
+	background: #378786; /*dark teal*/
+	color: #fff;
+} 
+
+.fa-edit:hover {
+	color: #fff;
 }
 
 .profile-info div:first-child {

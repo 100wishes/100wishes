@@ -49,18 +49,12 @@ Class PagesController extends MainController {
 	}
 
 	public function login() {
-		$pID = 6;
 		$arrData['nav'] = MainNav::makeNav();
-		$arrData['page'] = GetPage::getPageInfo($pID);
-
 		$content = $this->showview('login', $arrData);
 		include('templates/pages.php');
 	}
 	public function profile() {
-		$pID = 7;
 		$arrData['nav'] = MainNav::makeNav();
-		$arrData['page'] = GetPage::getPageInfo($pID);
-
 		$content = $this->showview('profile', $arrData);
 		include('templates/pages.php');
 	}
