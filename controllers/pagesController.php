@@ -58,5 +58,15 @@ Class PagesController extends MainController {
 		$content = $this->showview('profile', $arrData);
 		include('templates/pages.php');
 	}
+	public function missions() {
+		$arrData['nav'] = MainNav::makeNav();
+		$content = $this->showview('missions', $arrData);
+		include('templates/pages.php');
+	}
+	public function booking() {
+		$arrData['nav'] = MainNav::makeNav();
+		$content = $this->showview('booking', $arrData);
+		include('templates/pages.php');
+	}
 }
 ?>
