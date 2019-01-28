@@ -1,7 +1,11 @@
-<h1>About Page</h1>
-<p><?=$arrData['page']['strMainContent']?></p>
+<div id="smallHero">
+	<div class="smallHero-header">
+		<img src="assets/abouthero.jpg"/>
+		<h2>About Us</h2>
+	</div><!-- //smallHero-header-->
+</div><!-- //smallHero-->
 
 <div class="aboutPar">
-	<p>At Wish League, we believe in making every child's wish come true. We bridge the gap by providing an online platform with participating hospitals seeking help in completing special requests from their young patients. The primary objective is to facilitate a connection with philanthropists and hospital representatives so that they can work together in making a child's wish become a reality.</p>
+	<p><?=$arrData['page']['strMainContent']?></p>
 </div><!--aboutPar-->
 

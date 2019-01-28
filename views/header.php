@@ -10,7 +10,9 @@
 <body>
 	<header>
 		<div class="logo">
-			<img src="images/logo.svg">
+			<a href="">
+				<img src="images/logo.svg">
+			</a>
 		</div>
 	<?php
 		include('views/nav.php');

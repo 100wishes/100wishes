@@ -1,5 +1,5 @@
 /*Fonts
-Montserrat:; regular, semi-bold and bold*/
+Montserrat 400 regular, 600 semi-bold, 700 bold*/
 
 /*Colors
 #4fccc6 light turquoise
@@ -159,6 +159,55 @@ footer #socialNav .fab:hover {
 	transform: scale(1.2);
 }
 
+
+.btn-primary {
+	color:#fff;
+	background:#ff8500 /*orange*/;
+	padding:10px 40px;
+	font-weight:600;
+	border-radius:3px;
+	font-size:16px;
+}
+
+.btn-primary:hover {
+	background:#4fccc6 /*light turquoise*/;
+}
+
+.btn-primary-reverse {
+	color:#ff8500 /*orange*/;
+	border:2px solid #ff8500 /*orange*/;
+	background:#fff;
+	padding:10px 20px;
+	font-weight:600;
+	border-radius:3px;
+	font-size:16px;
+}
+
+.btn-primary:hover {
+	background:#4fccc6 /*light turquoise*/;
+}
+
+.btn-secondary {
+	border:none;
+	font-size:20px;
+	padding: 10px 40px;
+	border:2px solid #378786 /*dark teal*/;
+	background:#fff;
+	margin-bottom:20px;
+	font-weight:600;
+	border-radius:3px;
+	cursor: pointer;
+	height:50px;
+}
+
+.btn-secondary:hover, .btn-primary-reverse:hover {
+	background:#378786 /*dark teal*/;
+	color:#fff;
+	border:none;
+}
+
+
+
 /*-- Start of Home --*/
 
 #home {
@@ -257,7 +306,8 @@ p.introHeading {
 	max-width: 100%;
 	text-align:left;
 	margin:auto;
-	margin-top:150px;
+	margin-top:50px;
+	padding-bottom:250px;
 }
 
 .aboutPar p {
@@ -559,3 +609,113 @@ p.introHeading {
 /*-- End of Profile --*/
 
 
+
+
+/*-- Start of Hospitals --*/
+.hospitalsContainer {
+	width:780px;
+	max-width: 100%;
+	margin:auto;
+	margin-top:50px;
+	padding-bottom:550px;
+}
+
+.hospitalsThumb {
+	border:2px solid #ff8500 /*orange*/;
+	border-radius: 3px;
+	padding:40px;
+	float:left;
+	width:340px;
+	margin:20px;
+}
+
+.hospitalsThumb img {
+	width:200px;
+	margin-bottom:10px;
+}
+
+.hospitalsThumb p {
+	color:#000;
+	font-size:16px;
+	font-weight:600;
+	line-height:1.3em;
+}
+
+p.location {
+	margin-bottom:30px;
+}
+
+
+/*-- End of Hospitals --*/
+
+
+
+
+
+/*-- Start of Hospital --*/
+.hospitalsProfileContainer {
+	width:900px;
+	max-width: 100%;
+	margin:auto;
+	margin-top:50px;
+	margin-bottom:300px;
+	overflow: hidden;
+	position: relative;
+}
+
+.hospitalsProfile {
+	float:left;
+	width:50%;
+}
+
+.hospitalsProfileContainer h1 {
+	font-size:40px;
+	color:#ff8500 /*orange*/;
+	font-weight:700;
+	margin-bottom:20px;
+}
+
+.hospitalsProfile img{
+	width:400px;
+}
+
+.hospitalsProfile p {
+	color:#000;
+	font-size:16px;
+	font-weight:600;
+	line-height: 1.5em;
+}
+
+.wishesContainer {
+	width:900px;
+	max-width: 100%;
+	position: relative;
+	margin:auto;
+}
+
+.wishesContainer h1{
+	font-size:40px;
+	color:#ff8500 /*orange*/;
+	font-weight:700;
+	margin-bottom:20px;
+}
+
+.wish p{
+	color:#000;
+	font-size:18px;
+	font-weight:600;
+	margin-bottom: 60px;
+}
+
+
+.wish-btns{
+	float:right;
+	margin-top:-80px;
+}
+
+.fulfill {
+	margin-right:15px;
+}
+
+
+/*-- End of Hospital --*/
