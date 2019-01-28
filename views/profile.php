@@ -17,8 +17,8 @@
 			<p><span class="label">Missions fulfilled: </span>0</p>
 		</div>
 
-		<a href="#" class="secondaryBtn">Edit Profile</a>
-		<a href="#" class="primaryBtn">View Missions</a>
+		<a href="#" class="profileSecondaryBtn">Edit Profile</a>
+		<a href="#" class="profilePrimaryBtn">View Missions</a>
 	</div><!--profile-info-->
 </div><!--profile-->
 

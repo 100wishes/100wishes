@@ -565,7 +565,7 @@ p.introHeading {
 	color: #ff8500; /*orange*/
 }
 
-.primaryBtn {
+.profilePrimaryBtn {
 	color: #fff;
 	background: #ff8500; /*orange*/
 	border: 2px solid #ff8500; /*orange*/
@@ -576,12 +576,12 @@ p.introHeading {
 	font-size: 11pt;
 }
 
-.primaryBtn:hover {
+.profilePrimaryBtn:hover {
 	color: #ff8500; /*orange*/
 	background: #fff;
 }
 
-.secondaryBtn {
+.profileSecondaryBtn {
 	color: #378786; /*dark teal*/
 	background: #fff;
 	border: 2px solid #378786; /*dark teal*/
@@ -592,7 +592,7 @@ p.introHeading {
 	font-size: 11pt;
 }
 
-.secondaryBtn:hover {
+.profileSecondaryBtn:hover {
 	background: #378786; /*dark teal*/
 	color: #fff;
 } 
@@ -607,6 +607,7 @@ p.introHeading {
 
 
 /*-- End of Profile --*/
+
 
 
 
@@ -719,3 +720,71 @@ p.location {
 
 
 /*-- End of Hospital --*/
+
+/*-- Start of Missions --*/
+
+#missions {
+	padding-bottom: 300px;
+}
+
+#missions h3 {
+	font-size: 24pt;
+	font-weight: 700;
+	color: #ff8500; /*orange*/
+}
+
+.missions-heading {
+	margin: 0 auto;
+	width: 1100px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 170px;
+}
+
+.wish {
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 1250px;
+	display: grid;
+	grid-template-columns: 4fr 2fr 1fr;
+	grid-column-gap: 50px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid lightgray;
+}
+
+.wish > div > a {
+	float: left;
+	margin-right: 10px;
+}
+
+.fa-minus-circle {
+	color: red;
+}
+
+.fa-minus-circle:hover {
+	color: #000;
+}
+
+.wish p {
+	color: #000;
+}
+
+.fulfill {
+	color: #fff;
+	background: #ff8500; /*orange*/
+	border: 2px solid #ff8500; /*orange*/
+	padding: 5px 15px;
+	width: 75px;
+	font-weight: 700;
+	border-radius: 3px;
+	font-size: 10pt;
+	margin-top: -7px;
+}
+
+.fulfill:hover {
+	color: #ff8500; /*orange*/
+	background: #fff;
+}
+
+/*-- End of Missions --*/
+
