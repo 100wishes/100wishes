@@ -132,6 +132,7 @@ if(isset($_GET['hID'])) {
 		$postal = '';
 		$address = '';
 		$photo = '';
+		$image = '';
 	} else {
 		$hospInfo = $arrData['hospitalInfo'][0];
 		$name = $hospInfo['strName'];
@@ -151,13 +152,13 @@ if(isset($_GET['hID'])) {
 	<form id="hospForm" method="post" action="index.php?controller=admin&action=save&hID=<?=$_GET['hID']?>" enctype="multipart/form-data">
 		<div>
 			<label>Logo:</label>
-			<input type="file" name="strPhoto" value="<?=$image?>" />
-			<input type="hidden" name="photo" value="<?=$image?>" />
+			<input type="file" name="strPhoto" />
 		<?php
 		if($image) {
 		?>
 			<div class="editImg">
 				<img src="assets/<?=$image?>" alt="<?=$image?>" />
+				<input type="hidden" name="photo" value="<?=$image?>" />
 			</div>
 		<?php
 		}

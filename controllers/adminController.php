@@ -101,18 +101,23 @@ Class AdminController extends MainController {
 	public function save() {
 		$this->checkUser();
 		if(isset($_GET['cID'])) {
-			$arrData['client'] = Save::saveClient($_GET['cID']);
+			Save::saveClient($_GET['cID']);
 			header("location: index.php?controller=admin&action=clients&save=true");
 		}
 
 		if(isset($_GET['uID'])) {
-			$arrData['user'] = Save::saveUser($_GET['uID']);
+			Save::saveUser($_GET['uID']);
 			header("location: index.php?controller=admin&action=users&save=true");
 		}
 
 		if(isset($_GET['hID'])) {
-			$arrData['hospitalInfo'] = Save::saveHospital($_GET['hID']);
-			header("location: index.php?controller=admin&action=hospitals&save=true");
+			Save::saveHospital($_GET['hID']);
+			print_r($_SESSION);
+			if($_SESSION["bAdmin"] == 1) {
+				header("location: index.php?controller=admin&action=hospitals&save=true");
+			} else if($_SESSION["bAdmin"] == 0) {
+				header("location: index.php?controller=admin&action=hospital&save=true");
+			}
 		}
 	}
 }

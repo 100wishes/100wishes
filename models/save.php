@@ -9,12 +9,12 @@ Class Save {
 
 		$sql = "UPDATE users
 				SET 
-					strEmail = '".$_POST['strEmail']."',
-					strFirstName = '".$_POST['strFirstName']."',
-					strLastName = '".$_POST['strLastName']."',
-					nPhone = '".$_POST['nPhone']."',
+					strEmail = '".addslashes($_POST['strEmail'])."',
+					strFirstName = '".addslashes($_POST['strFirstName'])."',
+					strLastName = '".addslashes($_POST['strLastName'])."',
+					nPhone = '".addslashes($_POST['nPhone'])."',
 					nProvinceID = ".$_POST['nProvinceID'].",
-					strCity = '".$_POST['strCity']."',
+					strCity = '".addslashes($_POST['strCity'])."',
 					strPassword = '".$pass."'
 				WHERE id = ".$cID;
 		return DBFactory::newData()->runSql("getData", $sql);
@@ -36,23 +36,74 @@ Class Save {
 					    nPhone,
 					    nHospitalID)
 					VALUES(
-					    '".$_POST['strEmail']."',
+					    '".addslashes($_POST['strEmail'])."',
 					    '".$pass."',
-					    '".$_POST['strFirstName']."',
-					    '".$_POST['strLastName']."',
-					    '".$_POST['nPhone']."',
+					    '".addslashes($_POST['strFirstName'])."',
+					    '".addslashes($_POST['strLastName'])."',
+					    '".addslashes($_POST['nPhone'])."',
 					    ".$_POST['nHospitalID'].")";
 
 			return DBFactory::newData()->runSql("saveData", $sql);
 		} else {
 			$sql = "UPDATE users_cms
 					SET 
-						strEmail = '".$_POST['strEmail']."',
-						strFirstName = '".$_POST['strFirstName']."',
-						strLastName = '".$_POST['strLastName']."',
-						nPhone = '".$_POST['nPhone']."',
+						strEmail = '".addslashes($_POST['strEmail'])."',
+						strFirstName = '".addslashes($_POST['strFirstName'])."',
+						strLastName = '".addslashes($_POST['strLastName'])."',
+						nPhone = '".addslashes($_POST['nPhone'])."',
 						strPassword = '".$pass."'
 					WHERE id = ".$uID;
+
+			return DBFactory::newData()->runSql("getData", $sql);
+		}
+	}
+
+	static function saveHospital($hID) {
+		if(isset($_FILES['strPhoto'])) {
+			$fileUpload = DBFactory::newData()->uploadImg('strPhoto');
+		} else {
+			$fileUpload = $_POST['photo'];
+		}
+
+		if($hID == 0) {
+			$sql = "INSERT INTO hospitals (
+					    strPhoto,
+					    strName,
+					    strEmail,
+					    nPhone,
+					    nKids,
+					    strBio,
+					    strAddress,
+					    strCity,
+					    nProvinceID,
+					    strPostalCode)
+					VALUES(
+						'".$fileUpload."',
+					    '".addslashes($_POST['strName'])."',
+					    '".addslashes($_POST['strEmail'])."',
+					    '".addslashes($_POST['nPhone'])."',
+					    '".$_POST['nKids']."',
+					    '".addslashes($_POST['strBio'])."',
+					    '".addslashes($_POST['strAddress'])."',
+					    '".addslashes($_POST['strCity'])."',
+					    '".$_POST['nProvinceID']."',
+					    '".addslashes($_POST['strPostalCode'])."')";
+
+			return DBFactory::newData()->runSql("saveData", $sql);
+		} else {
+			$sql = "UPDATE hospitals
+					SET 
+						strPhoto = '".$fileUpload."',
+						strName = '".addslashes($_POST['strName'])."',
+						strEmail = '".addslashes($_POST['strEmail'])."',
+						nPhone = '".addslashes($_POST['nPhone'])."',
+						nKids = '".$_POST['nKids']."',
+						strBio = '".addslashes($_POST['strBio'])."',
+						strAddress = '".addslashes($_POST['strAddress'])."',
+						strCity = '".addslashes($_POST['strCity'])."',
+						nProvinceID = '".$_POST['nProvinceID']."',
+						strPostalCode = '".addslashes($_POST['strPostalCode'])."'
+					WHERE id = ".$hID;
 
 			return DBFactory::newData()->runSql("getData", $sql);
 		}
