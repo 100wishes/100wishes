@@ -14,5 +14,10 @@ Class Delete {
 		$sql = "DELETE FROM hospitals WHERE id='".$hID."'";
 		return DBFactory::newData()->runSql("getData", $sql);
 	}
+
+	static function deleteWish($wID) {
+		$sql = "DELETE FROM wishes WHERE id='".$wID."'";
+		return DBFactory::newData()->runSql("getData", $sql);
+	}
 }
 ?>

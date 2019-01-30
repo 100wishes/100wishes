@@ -17,6 +17,18 @@ Class AdminController extends MainController {
 		include('templates/admin.php');
 	}
 
+	public function wishes() {
+		$this->checkUser();
+		if($_SESSION["bAdmin"] == 1) {
+			$arrData['wishes'] = GetWishes::getAllWishes();
+		} else if($_SESSION["bAdmin"] == 0) {
+			$arrData['wishes'] = GetWishes::getHospitalWishes($_SESSION["hospitalID"]);
+		}
+		
+		$content = $this->showview('admin_wishes', $arrData);
+		include('templates/admin.php');
+	}
+
 	public function hospital() {
 		$this->checkUser();
 		$hID = $_SESSION["hospitalID"];
@@ -75,6 +87,11 @@ Class AdminController extends MainController {
 		if(isset($_GET['hID'])) {
 			$arrData['hospitalInfo'] = GetHospitals::getOneHospital($_GET['hID']);
 		}
+
+		if(isset($_GET['wID'])) {
+			$arrData['status'] = GetWishes::getStatus();
+			$arrData['wishInfo'] = GetWishes::getOneWish($_GET['wID']);
+		}
 		
 		$content = $this->showview('admin_add', $arrData);
 		include('templates/admin.php');
@@ -96,6 +113,11 @@ Class AdminController extends MainController {
 			Delete::deleteHospital($_GET['hID']);
 			header("location: index.php?controller=admin&action=hospitals&delete=true");
 		}
+
+		if(isset($_GET['wID'])) {
+			Delete::deleteWish($_GET['wID']);
+			header("location: index.php?controller=admin&action=wishes&delete=true");
+		}
 	}
 
 	public function save() {
@@ -112,12 +134,16 @@ Class AdminController extends MainController {
 
 		if(isset($_GET['hID'])) {
 			Save::saveHospital($_GET['hID']);
-			print_r($_SESSION);
 			if($_SESSION["bAdmin"] == 1) {
 				header("location: index.php?controller=admin&action=hospitals&save=true");
 			} else if($_SESSION["bAdmin"] == 0) {
 				header("location: index.php?controller=admin&action=hospital&save=true");
 			}
+		}
+
+		if(isset($_GET['wID'])) {
+			Save::saveWish($_GET['wID']);
+			header("location: index.php?controller=admin&action=wishes&save=true");
 		}
 	}
 }

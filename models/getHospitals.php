@@ -10,11 +10,6 @@ Class GetHospitals {
 		return DBFactory::newData()->runSql("getData", $sql);
 	}
 
-	static function getWishes($hID) {
-		$sql = "SELECT wishes.*, status.strName AS status FROM wishes LEFT JOIN status ON wishes.nStatusID = status.id WHERE nHospitalID = ".$hID;
-		return DBFactory::newData()->runSql("getData", $sql);
-	}
-
 	static function showHospitalList() {
 		$sql = "SELECT id, strName FROM hospitals WHERE hospitals.id <> 3";
 		return DBFactory::newData()->runSql("getData", $sql);

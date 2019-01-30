@@ -205,4 +205,69 @@ if(isset($_GET['hID'])) {
 	</form>
 <?php
 }
+
+if(isset($_GET['wID'])) {
+	if($_GET['wID'] == 0) {
+		$wishName = '';
+	} else {
+		$wishes = $arrData['wishInfo'][0];
+
+		$wishName = $wishes['strWish'];
+		$statusID = $wishes['nStatusID'];
+		$hospitalName = $wishes['strName'];
+		$userID = $wishes['nUserID'];
+		$user = $wishes['strFirstName'];
+		$phone = $wishes['nPhone'];
+		$email = $wishes['strEmail'];
+	}
+?>
+	<h1>Edit Wish</h1>
+
+	<form id="wishtForm" method="post" action="index.php?controller=admin&action=save&wID=<?=$_GET['wID']?>">
+<?php
+	if($_GET['wID'] == 0) {
+?>
+		<label>Wish:</label>
+		<input type="text" id="wish" name="strWish" value="<?=$wishName?>" />
+<?php
+	} else {
+?>
+		<label>Wish:</label>
+		<p><?=$wishName?></p>
+
+		<label>Status:</label>
+		<select id="status" name="nStatusID">
+		<?php
+			foreach ($arrData['status'] as $status) {
+			$selected = $statusID == $status['id']?"selected":"";
+		?>
+			<option value="<?=$status["id"]?>" <?=$selected?>><?=$status["strName"]?></option>
+		<?php
+			}
+		?>
+		</select>
+
+		<?php
+		if($_SESSION["bAdmin"] == 1) {
+		?>
+			<label>Hospital:</label>
+			<p><?=$hospitalName?></p>
+		<?php
+		}
+
+		if($userID != 0) {
+		?>
+			<label>Who Fulfilled:</label>
+			<p><?=$user?></p>
+			<p><?=$email?></p>
+			<p><?=$phone?></p>
+<?php
+		}
+	}
+?>
+
+		<input id="btn-wishForm" type="submit" name="submit" value="Save" />
+	</form>
+<?php
+}
 ?>

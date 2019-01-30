@@ -108,5 +108,29 @@ Class Save {
 			return DBFactory::newData()->runSql("getData", $sql);
 		}
 	}
+
+	static function saveWish($wID) {
+		if($wID == 0) {
+			$sql = "INSERT INTO wishes (
+					    strWish,
+					    nStatusID,
+					    nHospitalID,
+					    nUserID)
+					VALUES(
+						'".addslashes($_POST['strWish'])."',
+						'3',
+						'".$_SESSION["hospitalID"]."',
+						'0')";
+
+			return DBFactory::newData()->runSql("saveData", $sql);
+		} else {
+			$sql = "UPDATE wishes
+					SET 
+						nStatusID = '".$_POST['nStatusID']."'
+					WHERE id = ".$wID;
+
+			return DBFactory::newData()->runSql("getData", $sql);
+		}
+	}
 }
 ?>
