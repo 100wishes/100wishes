@@ -104,10 +104,14 @@ if(isset($_GET['uID'])) {
 		?>
 		</select>
 <?php
-	} else if($_SESSION["bAdmin"] == 1 && $_GET['uID'] > 0) {
+	} else if($_SESSION["bAdmin"] == 0 && $_GET['uID'] > 0) {
 ?>
 		<p>Hospital:</p>
 		<p><?=$hospital?></p>
+<?php
+	} else if($_SESSION["bAdmin"] == 0 && $_GET['uID'] == 0) {
+?>
+		<input type="hidden" id="hospital" name="nHospitalID" value="<?=$_SESSION["hospitalID"]?>" />
 <?php
 	}
 ?>
