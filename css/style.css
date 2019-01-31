@@ -791,8 +791,6 @@ p.location {
 /*-- End of Missions --*/
 
 
-
-
 /*--Start of Booking--*/
 
 #booking {
@@ -879,6 +877,27 @@ p.location {
 }
 
 
-
-
 /*--End of Booking--*/
+
+/*--Start of Thank You--*/
+
+#thankyou {
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 600px;
+	height: 400px;
+	text-align: center;
+}
+
+#thankyou h2 {
+	font-size: 30pt;
+	font-weight: 700;
+	color: #ff8500; /*orange*/
+	margin-bottom: 15px;
+}
+
+#thankyou p {
+	color: #000;
+}
+
+/*--End of Thank You--*/

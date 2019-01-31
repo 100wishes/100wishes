@@ -68,5 +68,10 @@ Class PagesController extends MainController {
 		$content = $this->showview('booking', $arrData);
 		include('templates/pages.php');
 	}
+	public function thankyou() {
+		$arrData['nav'] = MainNav::makeNav();
+		$content = $this->showview('thankyou', $arrData);
+		include('templates/pages.php');
+	}
 }
 ?>
