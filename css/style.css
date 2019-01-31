@@ -610,8 +610,6 @@ p.introHeading {
 
 
 
-
-
 /*-- Start of Hospitals --*/
 .hospitalsContainer {
 	width:780px;
@@ -721,6 +719,10 @@ p.location {
 
 /*-- End of Hospital --*/
 
+
+
+
+
 /*-- Start of Missions --*/
 
 #missions {
@@ -788,3 +790,95 @@ p.location {
 
 /*-- End of Missions --*/
 
+
+
+
+/*--Start of Booking--*/
+
+#booking {
+	margin: 0 auto;
+	width: 878px;
+	height: 1000px;
+}
+
+#booking h2 {
+	font-size: 30pt;
+	font-weight: 700;
+	color: #ff8500; /*orange*/
+	margin-bottom: 5px;
+}
+ 
+.subheading {
+	color: #000;
+}
+
+#bookingForm {
+	margin-top: 40px;
+	height: 650px;
+	border: 1px solid #378786; /*dark teal*/
+}
+
+#bookingForm img {
+	float: left;
+	display: inline-block;
+	height: 100%;
+}
+
+.bForm {
+	float: left;
+	display: inline-block;
+}
+
+.selectedWish {
+	width: 440px;
+	padding: 30px;
+	background: #378786; /*dark teal*/
+}
+
+.selectedWish p {
+	color: #fff;
+	margin-left: 120px;
+	line-height: 40px;
+}
+
+.selectedWish .book-wish-label {
+	font-weight: 700;
+	font-size: 16pt;
+	margin-left: 50px;
+}
+
+.bookDate {
+	padding: 30px;
+	margin-left: 50px;
+}
+
+.bookDate > div {
+	margin-bottom: 20px;
+}
+
+.bookDate label {
+	font-weight: 700;
+	font-size: 16pt;
+}
+
+.bookDate input, .bookDate select {
+	border: none;
+	font-size: 12pt;
+	text-align: center;
+	width: 200px;
+	padding: 5px;
+	border-bottom: 1px solid #378786; /*dark teal*/
+}
+
+.bookDate textarea {
+	display: block;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	width: 270px;
+	height: 150px;
+}
+
+
+
+
+/*--End of Booking--*/
