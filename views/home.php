@@ -4,10 +4,10 @@
 <section id="home">
 	<div class="homeHero">
 		<div class="heroTextContainer">
-			<h2>Be a HERO.</h2>
-			<p class="heroText">Help us grant these children's wishes and put a smile on their faces.</p>
+			<h2><?=$arrData['page']['strMainTitle']?></h2>
+			<p class="heroText"><?=$arrData['page']['strMainContent']?></p>
 
-			<a href="">Start Your Mission</a>
+			<a href="index.php?controler=pages&amp;action=hospitals">Start Your Mission</a>
 		</div><!--heroTextContainer-->
 	</div><!--homeHero-->
 
@@ -17,7 +17,7 @@
 		<div class="intro">
 			<div class="introBg">
 				<p>Bringing joy to children is our top priority. Our aim is to increase awareness so that hospitals seeking generosity can be connected with philanthropists.</p>
-				<a href="" class="btn-primary homeIntroBtn">Learn more</a>
+				<a href="index.php?controler=pages&amp;action=about" class="btn-primary homeIntroBtn">Learn more</a>
 			</div><!--introBg-->
 		</div><!--intro-->
 
