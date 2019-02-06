@@ -10,7 +10,7 @@
 <body>
 	<header>
 		<div class="logo">
-			<a href="">
+			<a href="index.php">
 				<img src="images/logo.svg">
 			</a>
 		</div><!--logo-->
@@ -18,12 +18,13 @@
 		include('views/nav.php');
 	?>
 		<div class="headerIcons">
-			<span class="iconMissions"><a href="">
+			<span class="iconMissions"><a href="index.php?controller=pages&amp;action=missions">
 				<img src="images/iconMissions.png" alt="iconMissions">
 				<p>Missions</p></a>
 			</span><!--iconMissions-->
 
-			<span class="iconProfile"><a href="">
+			<span><a href="index.php?controller=pages&amp;action=profile">
+			<span class="iconProfile"><a href="index.php?controller=pages&amp;action=profile">
 				<img src="images/iconProfile.png" alt="iconProfile">
 				<p>Profile</p></a>
 			</span><!--iconProfile-->

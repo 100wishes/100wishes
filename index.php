@@ -5,6 +5,7 @@ include("controllers/mainController.php");
 include("controllers/pagesController.php");
 include("controllers/adminController.php");
 include("models/getNav.php");
+include("models/getGlobals.php");
 include("models/getPage.php");
 include("models/getHospitals.php");
 include("models/getWishes.php");
