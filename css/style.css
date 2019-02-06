@@ -25,6 +25,10 @@ html {
 	margin: 0 auto;
 }
 
+body {
+	padding-bottom: 150px
+}
+
 .logo {
 	width:170px;
 	margin-left:70px;
@@ -48,9 +52,7 @@ header > * {
 	float: left;
     height: 100%;
     position: relative;
-
 }
-
 
 nav > * {
 	float:left;
@@ -58,7 +60,8 @@ nav > * {
 
 nav {
 	padding-top:80px;
-	margin-left:360px;
+	float:none;
+	display: inline-block;
 }
 
 nav a {
@@ -110,7 +113,6 @@ li:hover .dd  {
 	top:5px;
 	margin-right:70px;
 }
-
 
 footer {
 	background:#fff;
@@ -206,13 +208,126 @@ footer #socialNav .fab:hover {
 	border:none;
 }
 
+@media only screen and (max-width:930px){
+	header {
+		height:100px;
+	}
+
+	.logo{
+		width:100px;
+		margin-left:20px;
+		padding-top:15px;
+	}
+
+	nav {
+		padding-top:45px;
+		float:none;
+		display: inline-block;
+	}
+
+	nav a {
+		font-size:16px;
+		margin:10px;
+	}
+
+	.headerIcons {
+		padding-top:20px;
+		padding-right:20px;
+	}
+
+	.headerIcons a {
+		font-size:14px;
+	}
+
+	.headerIcons img {
+		width:25px;
+	}
+
+	.iconMissions {
+		margin-right:30px;
+	}
+
+	.iconProfile {
+		position: relative;
+		top:5px;
+	}
+
+	.iconStar {
+		width:50px;
+		margin-left:20px;
+		padding-top:20px;
+	}
+
+	footer p {
+		font-size:12px;
+		padding-left:20px;
+	}
+
+	.copyrightText {
+		margin-top:0px;
+	}
+
+	.footerCopyright > * {
+		float:none;
+	}
+
+	footer #socialNav {
+		position:absolute;
+		top:20px;
+		right:20px;
+	}
+
+	footer #socialNav .fab{
+		font-size:25px;
+		margin-left:20px;
+	}
+}
+
+@media only screen and (max-width:600px){
+	.logo{
+		width:60px;
+		margin-left:20px;
+		padding-top:30px;
+	}
+
+	nav {
+		padding-top:45px;
+	}
+
+	nav a {
+		font-size:12px;
+		margin:5px;
+	}
+
+	.headerIcons a {
+		font-size:12px;
+	}
+
+	.headerIcons > * {
+		float:none;
+	}
+
+	.headerIcons img {
+		width:15px;
+	}
+
+	.iconMissions {
+		margin-right:0px;
+	}
+
+	.headerIcons {
+		padding-top:8px;
+	}
+
+}
+
 
 
 /*-- Start of Home --*/
 
-#home {
+/*#home {
 	height: 1100px;
-}
+}*/
 
 .homeHero {
 	background-image:url("../images/homeHero.png");
@@ -235,16 +350,16 @@ footer #socialNav .fab:hover {
 	left:100px;
 }
 
+.homeHero h2 {
+	font-size:80px;
+	color:#fff;
+	font-weight:700;
+}
+
 .heroTextContainer p{
 	color:#fff;
 	font-size:25px;
 	font-weight:600;
-
-}
-
-p.heroHeading {
-	font-size:80px;
-	font-weight:700;
 }
 
 p.heroText{
@@ -256,7 +371,6 @@ p.heroText{
 	background:#ff8500 /*orange*/;
 	padding:20px 40px;
 	font-weight:700;
-	margin-top:40px;
 	border-radius:3px;
 	font-size:20px;
 }
@@ -273,7 +387,152 @@ p.introHeading {
 	margin-bottom: 90px;
 }
 
+#homeIntro {
+	width:800px;
+	height:600px;
+	margin:auto;
+	max-width: 100%;
+	margin-bottom:50px;
+}
+
+#homeIntro .intro {
+	float:left;
+	width:50%;
+}
+
+#homeIntro .intro img {
+	max-width: 100%;
+	height: 300px;
+	display: block;
+}
+
+.introBg {
+	background:#378786 /*dark teal*/;
+	width:400px;
+	height: 300px;
+	max-width: 100%;
+	padding:60px;
+}
+
+.introBg p{
+	color:#fff;
+	font-size:18px;
+	line-height:1.5em;
+	margin-bottom:30px;
+	margin-top:-20px;
+}
+
+.homeIntroBtn {
+	border:2px solid #fff;
+	background: none;
+}
+
+
+
+
+@media only screen and (max-width:930px){
+	.homeHero {
+		height:500px;
+		margin-top: 50px;
+	}
+
+	.heroTextContainer {
+		width:300px;
+		height:200px;
+		left:50px;
+	}
+
+	.homeHero h2 {
+		font-size:40px;
+		margin-bottom:10px;
+	}
+
+	.heroTextContainer p{
+		font-size:18px;
+	}
+
+	p.heroText{
+		margin-bottom:30px;
+	}
+
+	.heroTextContainer a{
+		padding:10px 30px;
+		font-size:16px;
+	}
+
+	p.introHeading {
+		font-size:40px;
+	}
+
+	#homeIntro {
+		width:100%;
+		height:100%;
+		margin:auto;
+		display: block;
+		max-width: 100%;
+		margin-bottom:50px;
+	}
+
+	.introBg {
+		width:400px;
+		height: 100%;
+		margin:auto;
+		display: block;
+	}
+
+	#homeIntro .intro {
+		float:none;
+		width:100%;
+		margin-bottom:40px;
+	}
+
+	#homeIntro .intro img {
+		max-width: 100%;
+		min-height: 100%;
+		margin:auto;
+		display: block;
+		width:400px;
+	}
+}
+
+@media only screen and (max-width:600px){
+	.homeHero {
+		height:300px;
+	}
+
+	.heroTextContainer {
+		width:300px;
+		height:160px;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		margin:auto;
+	}
+
+	.homeHero h2 {
+		font-size:30px;
+		margin-bottom:10px;
+	}
+
+	.heroTextContainer p{
+		font-size:16px;
+	}
+
+
+	.heroTextContainer a{
+		padding:10px 30px;
+		font-size:14px;
+	}
+
+	p.introHeading {
+		font-size:20px;
+	}
+}
 /*-- End of Home --*/
+
+
+
 
 
 /*-- Start of Small Hero --*/
@@ -307,7 +566,7 @@ p.introHeading {
 	text-align:left;
 	margin:auto;
 	margin-top:50px;
-	padding-bottom:250px;
+	padding-bottom:50px;
 }
 
 .aboutPar p {
@@ -408,11 +667,12 @@ p.introHeading {
 }
 
 .contactContainer {
-	height:900px;
+	height:700px;
 	width:800px;
 	max-width: 100%;
 	margin:auto;
 	margin-top: 30px;
+	margin-bottom:50px;
 }
 
 
