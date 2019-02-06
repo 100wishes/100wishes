@@ -6,63 +6,63 @@
 </div><!-- //smallHero-->
 
 <div class="hospitalsProfileContainer">
-		<h1>BC'S Children's Hospital</h1>
-		<div class="hospitalsProfile">
-			<img src="assets/bchildrenshospital.png" alt="bchildrenshospital">
-		</div><!--hospitalsProfile-->
+	<h1>BC'S Children's Hospital</h1>
+	<div class="hospitalsProfile">
+		<img src="assets/bchildrenshospital.png" alt="bchildrenshospital">
+	</div><!--hospitalsProfile-->
 
-		<div class="hospitalsProfile">
-			<p>This paragraph is meant to be a description of the hospital. This paragraph is meant to be a description of the hospital. This paragraph is meant to be a description of the hospital. This paragraph is meant to be a description of the hospital.</p>
-		</div><!--hospitalsProfile-->
-	</div><!--hospitalsProfileContainer-->
+	<div class="hospitalsProfile">
+		<p>This paragraph is meant to be a description of the hospital. This paragraph is meant to be a description of the hospital. This paragraph is meant to be a description of the hospital. This paragraph is meant to be a description of the hospital.</p>
+	</div><!--hospitalsProfile-->
+</div><!--hospitalsProfileContainer-->
 
-	<div class="wishesContainer">
-		<h1>Wishes</h1>
-			<div class="wish">
-				<p>"I want to meet Batman."</p>
-			</div><!--wish-->
+<div class="wishesContainer">
+	<h1>Wishes</h1>
+	<div class="wish">
+		<p>"I want to meet Batman."</p>
+	</div><!--wish-->
 
-			<div class="wish wish-btns">
-				<a href="" class="btn-primary fulfill">Fulfill</a>
-				<a href="" class="btn-primary-reverse">Add to missions</a>
-			</div><!--wish-->
+	<div class="wish wish-btns">
+		<a href="" class="btn-primary fulfill">Fulfill</a>
+		<a href="" class="btn-primary-reverse">Add to missions</a>
+	</div><!--wish-->
 
-			<div class="wish">
-				<p>"I want a toy truck."</p>
-			</div><!--wish-->
+	<div class="wish">
+		<p>"I want a toy truck."</p>
+	</div><!--wish-->
 
-			<div class="wish wish-btns">
-				<a href="" class="btn-primary fulfill">Fulfill</a>
-				<a href="" class="btn-primary-reverse">Add to missions</a>
-			</div><!--wish-->
+	<div class="wish wish-btns">
+		<a href="" class="btn-primary fulfill">Fulfill</a>
+		<a href="" class="btn-primary-reverse">Add to missions</a>
+	</div><!--wish-->
 
-			<div class="wish">
-				<p>"I wish to see the Avengers movie."</p>
-			</div><!--wish-->
+	<div class="wish">
+		<p>"I wish to see the Avengers movie."</p>
+	</div><!--wish-->
 
-			<div class="wish wish-btns">
-				<a href="" class="btn-primary fulfill">Fulfill</a>
-				<a href="" class="btn-primary-reverse">Add to missions</a>
-			</div><!--wish-->
+	<div class="wish wish-btns">
+		<a href="" class="btn-primary fulfill">Fulfill</a>
+		<a href="" class="btn-primary-reverse">Add to missions</a>
+	</div><!--wish-->
 
-			<div class="wish">
-				<p>"I want to fly a kite."</p>
-			</div><!--wish-->
+	<div class="wish">
+		<p>"I want to fly a kite."</p>
+	</div><!--wish-->
 
-			<div class="wish wish-btns">
-				<a href="" class="btn-primary fulfill">Fulfill</a>
-				<a href="" class="btn-primary-reverse">Add to missions</a>
-			</div><!--wish-->
+	<div class="wish wish-btns">
+		<a href="" class="btn-primary fulfill">Fulfill</a>
+		<a href="" class="btn-primary-reverse">Add to missions</a>
+	</div><!--wish-->
 
-			<div class="wish">
-				<p>"I want to make slime."</p>
-			</div><!--wish-->
+	<div class="wish">
+		<p>"I want to make slime."</p>
+	</div><!--wish-->
 
-			<div class="wish wish-btns">
-				<a href="" class="btn-primary fulfill">Fulfill</a>
-				<a href="" class="btn-primary-reverse">Add to missions</a>
-			</div><!--wish-->
-	</div><!--wishesContainer-->
+	<div class="wish wish-btns">
+		<a href="" class="btn-primary fulfill">Fulfill</a>
+		<a href="" class="btn-primary-reverse">Add to missions</a>
+	</div><!--wish-->
+</div><!--wishesContainer-->
 
 <h1><?=$arrData['hospital']['strName']?></h1>
 <img src="assets/<?=$arrData['hospital']['strPhoto']?>" alt="<?=$arrData['hospital']['strName']?>" />

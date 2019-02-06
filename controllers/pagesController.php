@@ -18,6 +18,15 @@ Class PagesController extends MainController {
 		include('templates/pages.php');
 	}
 
+	public function policies() {
+		$pID = 5;
+		$arrData['nav'] = MainNav::makeNav();
+		$arrData['page'] = GetPage::getPageInfo($pID);
+
+		$content = $this->showview('about', $arrData);
+		include('templates/pages.php');
+	}
+
 	public function hospitals() {
 		$pID = 2;
 		$arrData['nav'] = MainNav::makeNav();
@@ -33,7 +42,7 @@ Class PagesController extends MainController {
 		$arrData['nav'] = MainNav::makeNav();
 		$arrData['page'] = GetPage::getPageInfo($pID);
 		$arrData['hospital'] = GetHospitals::getOneHospital($_GET['hID'])[0];
-		$arrData['wishes'] = GetHospitals::getWishes($_GET['hID']);
+		$arrData['wishes'] = GetWishes::getHospitalWishes($_GET['hID']);
 
 		$content = $this->showview('hospital', $arrData);
 		include('templates/pages.php');
@@ -42,6 +51,7 @@ Class PagesController extends MainController {
 	public function contact() {
 		$pID = 4;
 		$arrData['nav'] = MainNav::makeNav();
+		$arrData['globals'] = Globals::makeArrGlobals();
 		$arrData['page'] = GetPage::getPageInfo($pID);
 
 		$content = $this->showview('contact', $arrData);

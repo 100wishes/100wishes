@@ -1,37 +1,36 @@
 <div id="smallHero">
 	<div class="smallHero-header">
-		<img src="assets/smallhero2.jpg"/>
-		<h2>Contact Us</h2>
+		<img src="assets/<?=$arrData['page']['strHeroImg']?>"/>
+		<h2><?=$arrData['page']['strMainTitle']?></h2>
 	</div><!-- //smallHero-header-->
 </div><!-- //smallHero-->
 
 <div class="contactContainer">
 	<div class="contact">
 		<div class="contactForm">
-		<form method="post" action="saveContact.php" onsubmit="return validateForm()">
+		<form id="contactForm" method="post" action="">
 			<label>Full Name</label>
-			<input type="text" name="strFullName" class="requiredField" id="strFullName">
+			<input class="required" type="text" id="name" name="strName" />
 			
 			<label>Email Address</label>
-			<input type="text" name="strEmailAddress" class="requiredField" id="strEmailAddress">
+			<input class="required" type="text" id="email" name="strEmail" />
 
 			<label>Telephone</label>	
-			<input type="text" name="strPhoneNumber" class="requiredField" id="strPhoneNumber">
+			<input type="text" id="phone" name="nPhone" />
 			
 			<label>Message</label>
-			<textarea name="strMessage">Write us a note.</textarea>
+			<textarea id="message" name="strMessage"></textarea>
 
-			<input type="submit" value="Complete" class="completeBtn"> 
+			<input id="btn-contactForm" class="completeBtn" type="submit" value="Complete" />
 		</form>
 		</div><!--contactForm-->	
 	</div><!--contact-->
 
 	<div class="contact">
 		<div class="contactInfo">
-			<h1>Get in touch</h1>
-			<p>570 Dunsmuir St #600</p>
-			<p>Vancouver, BC V6B 1Y1</p>
-			<p>(604) 682-2287</p>
+			<h1><?=$arrData['page']['strMainContent']?></h1>
+			<p><?=nl2br($arrData['globals']['address'])?></p>
+			<p><?=$arrData['globals']['phone']?></p>
 		</div><!--contactInfo-->
 	</div><!--contact-->
 </div><!--contactContainer-->
