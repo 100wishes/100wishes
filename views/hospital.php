@@ -1,12 +1,11 @@
 <div id="smallHero">
 	<div class="smallHero-header">
 		<img src="assets/hospitalshero.jpg"/>
-		<h2>Hospitals</h2>
+		<h2><?=$arrData['hospital']['strName']?></h2>
 	</div><!-- //smallHero-header-->
 </div><!-- //smallHero-->
 
 <div class="hospitalsProfileContainer">
-	<h1>BC'S Children's Hospital</h1>
 	<div class="hospitalsProfile">
 		<img src="assets/bchildrenshospital.png" alt="bchildrenshospital">
 	</div><!--hospitalsProfile-->
