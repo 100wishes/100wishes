@@ -17,14 +17,6 @@ Class MainController {
 		}
 	}
 
-	public function checkClient() {
-		if (!isset($_SESSION["clientID"])) 
-		{
-			header("location: index.php?controller=pages&action=login&error=true");
-			die;
-		}
-	}
-
 	public function logout() {
 		session_start();
 		session_destroy();

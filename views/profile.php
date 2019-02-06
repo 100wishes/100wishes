@@ -1,7 +1,7 @@
 <div id="smallHero">
 	<div class="smallHero-header">
-		<img src="assets/<?=$arrData['page']['strHeroImg']?>"/>
-		<h2><?=$arrData['page']['strMainTitle']?></h2>
+		<img src="assets/smallhero2.jpg"/>
+		<h2>My Profile</h2>
 	</div><!-- //smallHero-header-->
 </div><!-- //smallHero-->
 
