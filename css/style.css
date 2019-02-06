@@ -58,6 +58,10 @@ nav > * {
 	float:left;
 }
 
+nav li {
+	display: inline-block;
+}
+
 nav {
 	padding-top:80px;
 	float:none;
@@ -66,32 +70,7 @@ nav {
 
 nav a {
 	font-size:20px;
-	margin:30px;
-}
-
-.dd {
-	background:#378786 /*dark teal*/;
-	position:absolute;
-	display:none;
-}
-
-.dd a {
-	color:#fff;
-	margin:0;
-}
-
-li:hover .dd  {
-	display:block;
-}
-
-.dd li {
-	border-bottom:2px solid #fff;
-	padding:10px;
-	clear:both;
-}
-
-.dd li:hover {
-	background:#4fccc6 /*light turquoise*/;
+	margin:10px;
 }
 
 .headerIcons {
@@ -116,7 +95,6 @@ li:hover .dd  {
 
 footer {
 	background:#fff;
-	height:130px;
 	width:100%;
 	position:absolute;
 	box-shadow:0px 0px 20px 1px #378786 /*dark teal*/;
@@ -171,10 +149,6 @@ footer #socialNav .fab:hover {
 	font-size:16px;
 }
 
-.btn-primary:hover {
-	background:#4fccc6 /*light turquoise*/;
-}
-
 .btn-primary-reverse {
 	color:#ff8500 /*orange*/;
 	border:2px solid #ff8500 /*orange*/;
@@ -186,7 +160,9 @@ footer #socialNav .fab:hover {
 }
 
 .btn-primary:hover {
-	background:#4fccc6 /*light turquoise*/;
+	background:#fff;
+	color:#ff8500 /*orange*/;
+	border:2px solid #ff8500 /*orange*/;
 }
 
 .btn-secondary {
@@ -202,10 +178,9 @@ footer #socialNav .fab:hover {
 	height:50px;
 }
 
-.btn-secondary:hover, .btn-primary-reverse:hover {
-	background:#378786 /*dark teal*/;
+.btn-secondary:hover, .btn-primary-reverse:hover, .homeIntroBtn:hover {
 	color:#fff;
-	border:none;
+	background:#ff8500 /*orange*/;
 }
 
 @media only screen and (max-width:930px){
@@ -227,7 +202,6 @@ footer #socialNav .fab:hover {
 
 	nav a {
 		font-size:16px;
-		margin:10px;
 	}
 
 	.headerIcons {
@@ -283,7 +257,7 @@ footer #socialNav .fab:hover {
 	}
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:630px){
 	.logo{
 		width:60px;
 		margin-left:20px;
@@ -313,6 +287,17 @@ footer #socialNav .fab:hover {
 
 	.iconMissions {
 		margin-right:0px;
+	}
+
+	.iconMissionsImg {
+		position: relative;
+		top:5px;
+	}
+
+	.iconProfileImg {
+		margin-top:5px;
+		top:5px;
+		position: relative;
 	}
 
 	.headerIcons {
@@ -539,11 +524,13 @@ p.introHeading {
 
 #smallHero {
 	margin-top: 170px;
-	height: 250px;
+	height:100%;
 	position: relative;
 }
+
 #smallHero img {
 	width: 100%;
+	height: 200px;
 }
 
 #smallHero h2 {
@@ -552,6 +539,33 @@ p.introHeading {
 	top: 75px;
 	left: 70px;
 	color: #fff;
+}
+
+@media only screen and (max-width:930px){
+	#smallHero {
+		margin-top:100px;
+	}
+
+	#smallHero img {
+		height: 150px;
+	}
+
+	#smallHero h2 {
+		font-size:30pt;
+		top:40px;
+	}
+}
+
+@media only screen and (max-width:800px){
+	#smallHero img {
+		height: 90px;
+	}
+
+	#smallHero h2 {
+		font-size:20pt;
+		top:30px;
+		left:30px;
+	}
 }
 
 
@@ -578,6 +592,7 @@ p.introHeading {
 @media only screen and (max-width: 1000px){
 	.aboutPar {
 		width:70%;
+
 	}
 }
 
@@ -590,10 +605,13 @@ p.introHeading {
 /*-- End of About --*/
 
 
+
+
 /*-- Start of Contact --*/
 .contactForm {
 	border:2px solid #378786 /*dark teal*/;
 	width:400px;
+	max-width: 100%;
 	padding:30px;
 	border-radius:3px;
 	margin:auto;
@@ -675,6 +693,38 @@ p.introHeading {
 	margin-bottom:50px;
 }
 
+@media only screen and (max-width:930px){
+	.contact{
+		float: none;
+	}
+
+	.contactInfo {
+		padding-left:0px;
+		width:100%;
+		margin-top:50px;
+	}
+
+	.contactContainer {
+		height:100%;
+		width:100%;
+	}
+}
+
+@media only screen and (max-width:600px){
+	.contactContainer {
+		width:80%;
+	}
+	
+	.contactInfo h1 {
+		font-size:30px;
+		margin-bottom:20px;
+	}
+
+	.contactInfo p{
+		font-size:16px;
+	}
+
+}
 
 /*-- End of Contact --*/
 
@@ -876,7 +926,7 @@ p.introHeading {
 	max-width: 100%;
 	margin:auto;
 	margin-top:50px;
-	padding-bottom:550px;
+	padding-bottom:400px;
 }
 
 .hospitalsThumb {
@@ -885,6 +935,7 @@ p.introHeading {
 	padding:40px;
 	float:left;
 	width:340px;
+	max-width: 100%;
 	margin:20px;
 }
 
@@ -904,6 +955,19 @@ p.location {
 	margin-bottom:30px;
 }
 
+@media only screen and (max-width:930px){
+	.hospitalsContainer {
+		width:100%;
+		padding-bottom:0px;
+	}
+
+	.hospitalsThumb {
+		float:none;
+		margin:0;
+		margin:auto;
+		margin-bottom:50px;
+	}
+}
 
 /*-- End of Hospitals --*/
 
@@ -917,7 +981,7 @@ p.location {
 	max-width: 100%;
 	margin:auto;
 	margin-top:50px;
-	margin-bottom:300px;
+	margin-bottom:80px;
 	overflow: hidden;
 	position: relative;
 }
@@ -927,15 +991,9 @@ p.location {
 	width:50%;
 }
 
-.hospitalsProfileContainer h1 {
-	font-size:40px;
-	color:#ff8500 /*orange*/;
-	font-weight:700;
-	margin-bottom:20px;
-}
-
 .hospitalsProfile img{
 	width:400px;
+	max-width: 100%
 }
 
 .hospitalsProfile p {
@@ -952,6 +1010,10 @@ p.location {
 	margin:auto;
 }
 
+.wishesContainer .wish {
+	height:100px;
+}
+
 .wishesContainer h1{
 	font-size:40px;
 	color:#ff8500 /*orange*/;
@@ -959,21 +1021,74 @@ p.location {
 	margin-bottom:20px;
 }
 
-.wish p{
+.wishesContainer .wish p{
 	color:#000;
 	font-size:18px;
 	font-weight:600;
-	margin-bottom: 60px;
 }
 
 
-.wish-btns{
+.wishesContainer .wish-btns{
 	float:right;
 	margin-top:-80px;
 }
 
-.fulfill {
+.wishesContainer .fulfill {
 	margin-right:15px;
+}
+
+@media only screen and (max-width:930px){
+	.wishesContainer {
+		width:100%;
+	}
+
+	.hospitalsProfile {
+		float:none;
+		width:100%;
+	}
+
+	.hospitalsProfile img{
+		margin:auto;
+		display: block;
+		margin-bottom:30px;
+	}
+
+	.hospitalsProfile p {
+		width:400px;
+		max-width: 100%;
+		margin:auto;
+	}
+
+	.wishesContainer {
+		width:80%;
+	}
+
+	.wishesContainer .wish {
+		height:50px;
+	}
+
+	.wishesContainer .wish p{
+		margin-bottom: 10px;
+	}
+
+	.wishesContainer .wish-btns{
+		float:none;
+		margin-top:0px;
+		margin-bottom: 50px;
+		border-bottom:1px solid lightgrey;
+	}
+
+}
+
+@media only screen and (max-width:600px){
+	.hospitalsProfileContainer {
+		width:80%;
+	}
+
+	.hospitalsProfile p {
+		font-size:14px;
+		width:100%;
+	}
 }
 
 
