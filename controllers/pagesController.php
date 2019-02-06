@@ -38,11 +38,11 @@ Class PagesController extends MainController {
 	}
 
 	public function hospital() {
-		$pID = 5;
+		$pID = 2;
 		$arrData['nav'] = MainNav::makeNav();
 		$arrData['page'] = GetPage::getPageInfo($pID);
 		$arrData['hospital'] = GetHospitals::getOneHospital($_GET['hID'])[0];
-		$arrData['wishes'] = GetWishes::getHospitalWishes($_GET['hID']);
+		$arrData['wishes'] = GetWishes::getHospitalAvailableWishes($_GET['hID']);
 
 		$content = $this->showview('hospital', $arrData);
 		include('templates/pages.php');
@@ -59,27 +59,43 @@ Class PagesController extends MainController {
 	}
 
 	public function login() {
+		$pID = 9;
 		$arrData['nav'] = MainNav::makeNav();
+		$arrData['page'] = GetPage::getPageInfo($pID);
+
 		$content = $this->showview('login', $arrData);
 		include('templates/pages.php');
 	}
 	public function profile() {
+		$pID = 8;
+		$this->checkClient();
 		$arrData['nav'] = MainNav::makeNav();
+		$arrData['page'] = GetPage::getPageInfo($pID);
+
 		$content = $this->showview('profile', $arrData);
 		include('templates/pages.php');
 	}
 	public function missions() {
+		$pID = 7;
 		$arrData['nav'] = MainNav::makeNav();
+		$arrData['page'] = GetPage::getPageInfo($pID);
+
 		$content = $this->showview('missions', $arrData);
 		include('templates/pages.php');
 	}
 	public function booking() {
+		$pID = 10;
 		$arrData['nav'] = MainNav::makeNav();
+		$arrData['page'] = GetPage::getPageInfo($pID);
+
 		$content = $this->showview('booking', $arrData);
 		include('templates/pages.php');
 	}
 	public function thankyou() {
+		$pID = 10;
 		$arrData['nav'] = MainNav::makeNav();
+		$arrData['page'] = GetPage::getPageInfo($pID);
+
 		$content = $this->showview('thankyou', $arrData);
 		include('templates/pages.php');
 	}

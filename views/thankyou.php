@@ -1,6 +1,6 @@
 <div id="smallHero">
 	<div class="smallHero-header">
-		<img src="assets/smallhero2.jpg"/>
+		<img src="assets/<?=$arrData['page']['strHeroImg']?>"/>
 		<h2>Thank You</h2>
 	</div><!-- //smallHero-header-->
 </div><!-- //smallHero-->

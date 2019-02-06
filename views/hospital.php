@@ -21,16 +21,24 @@
 <div class="wishesContainer">
 	<h3>Wishes:</h3>
 <?php 
-foreach($arrData['wishes'] as $wish) {
+if($arrData['wishes']) {
+	foreach($arrData['wishes'] as $wish) {
+		?>
+			<div class="wish">
+				<p><?=$wish['strWish']?></p>
+			</div><!--wish-->
+	
+			<div class="wish wish-btns">
+				<a href="" class="btn-primary fulfill">Fulfill</a>
+				<a href="" class="btn-primary-reverse">Add to missions</a>
+			</div><!--wish button-->
+	<?php
+	}
+} else {
 ?>
 	<div class="wish">
-		<p><?=$wish['strWish']?></p>
+		<p>Yay! All the wishes were fulfilled.</p>
 	</div><!--wish-->
-
-	<div class="wish wish-btns">
-		<a href="" class="btn-primary fulfill">Fulfill</a>
-		<a href="" class="btn-primary-reverse">Add to missions</a>
-	</div><!--wish button-->
 <?php
 }
 ?>
