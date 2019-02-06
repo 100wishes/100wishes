@@ -99,5 +99,13 @@ Class PagesController extends MainController {
 		$content = $this->showview('thankyou', $arrData);
 		include('templates/pages.php');
 	}
+	public function signup() {
+		$pID = 9;
+		$arrData['nav'] = MainNav::makeNav();
+		$arrData['page'] = GetPage::getPageInfo($pID);
+
+		$content = $this->showview('signup', $arrData);
+		include('templates/pages.php');
+	}
 }
 ?>

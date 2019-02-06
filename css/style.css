@@ -7,7 +7,7 @@ Montserrat 400 regular, 600 semi-bold, 700 bold*/
 #ffc200 yellow
 #ff8500 orange*/
 
-*{
+* {
 	margin:0;
 	padding:0;
 	font-family:'Montserrat', sans-serif;
@@ -34,7 +34,6 @@ body {
 	margin-left:70px;
 	padding-top:25px;
 }
-
 
 header {
 	width:100%;
@@ -66,7 +65,7 @@ nav {
 	padding-top:80px;
 	float:none;
 	display: inline-block;
-}
+} 
 
 nav a {
 	font-size:20px;
@@ -94,11 +93,12 @@ nav a {
 }
 
 footer {
-	background:#fff;
-	width:100%;
-	position:absolute;
-	box-shadow:0px 0px 20px 1px #378786 /*dark teal*/;
-	bottom:0;
+	background: #fff;
+	width: 100%;
+	position: absolute;
+	box-shadow: 0px 0px 20px 1px #378786 /*dark teal*/;
+	bottom: 0;
+	height: 130px;
 }
 
 .iconStar {
@@ -169,7 +169,7 @@ footer #socialNav .fab:hover {
 	border:none;
 	font-size:20px;
 	padding: 10px 40px;
-	border:2px solid #378786 /*dark teal*/;
+	border:2px solid #378786; /*dark teal*/
 	background:#fff;
 	margin-bottom:20px;
 	font-weight:600;
@@ -180,7 +180,7 @@ footer #socialNav .fab:hover {
 
 .btn-secondary:hover, .btn-primary-reverse:hover, .homeIntroBtn:hover {
 	color:#fff;
-	background:#ff8500 /*orange*/;
+	background: #378786; /*dark teal*/
 }
 
 @media only screen and (max-width:930px){
@@ -305,8 +305,6 @@ footer #socialNav .fab:hover {
 	}
 
 }
-
-
 
 /*-- Start of Home --*/
 
@@ -515,8 +513,6 @@ p.introHeading {
 	}
 }
 /*-- End of Home --*/
-
-
 
 
 
@@ -806,11 +802,11 @@ p.introHeading {
 }
 
 .loginContainer {
-	height:750px;
+	height: 500px;
 	width: 1200px;
 	max-width: 100%;
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 50px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
@@ -824,6 +820,18 @@ p.introHeading {
 
 .loginContainer .login h3 {
 	color: #ff8500; /*orange*/
+}
+
+.signUp h3 {
+	margin-left: 0px;
+}
+
+.signUp p {
+	color: #000;
+	width: 350px;
+	font-weight: bold;
+	line-height: 25px;
+	margin-bottom: 25px;
 }
 
 /*-- End of Login --*/
