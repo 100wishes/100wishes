@@ -17,7 +17,7 @@
 		<div class="intro">
 			<div class="introBg">
 				<p>Bringing joy to children is our top priority. Our aim is to increase awareness so that hospitals seeking generosity can be connected with philanthropists.</p>
-				<a href="index.php?controler=pages&amp;action=about" class="btn-primary homeIntroBtn">Learn more</a>
+				<a href="index.php?controler=pages&amp;action=about" class=" homeIntroBtn">Learn more</a>
 			</div><!--introBg-->
 		</div><!--intro-->
 

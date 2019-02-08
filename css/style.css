@@ -72,10 +72,20 @@ nav a {
 	margin:10px;
 }
 
+nav a:hover, .headerIcons a:hover {
+	color:#ff8500 /*orange*/;
+}
+
 .headerIcons {
 	padding-top:50px;
 	float:right;
 	padding-right:70px;
+	display: block;
+}
+
+.headerIcons img {
+	display: block;
+	margin: auto;
 }
 
 .headerIcons a {
@@ -178,7 +188,7 @@ footer #socialNav .fab:hover {
 	height:50px;
 }
 
-.btn-secondary:hover, .btn-primary-reverse:hover, .homeIntroBtn:hover {
+.btn-secondary:hover, .btn-primary-reverse:hover{
 	color:#fff;
 	background: #378786; /*dark teal*/
 }
@@ -358,7 +368,7 @@ p.heroText{
 	font-size:20px;
 }
 
-.heroTextContainer a:hover {
+.heroTextContainer a:hover{
 	background:#4fccc6 /*light turquoise*/;
 }
 
@@ -406,8 +416,18 @@ p.introHeading {
 }
 
 .homeIntroBtn {
+	color:#fff;
+	padding:10px 40px;
+	font-weight:600;
+	border-radius:3px;
+	font-size:16px;
 	border:2px solid #fff;
 	background: none;
+}
+
+.homeIntroBtn:hover {
+	background:#4fccc6 /*light turquoise*/;
+	border:none;
 }
 
 
@@ -604,6 +624,20 @@ p.introHeading {
 
 
 /*-- Start of Contact --*/
+
+.contactContainer {
+	height:700px;
+	width:800px;
+	max-width: 100%;
+	margin:auto;
+	margin-top: 30px;
+	margin-bottom:50px;
+}
+
+.contact{
+	float: left;
+}
+
 .contactForm {
 	border:2px solid #378786 /*dark teal*/;
 	width:400px;
@@ -629,7 +663,6 @@ p.introHeading {
 	font-weight:600;
 }
 
-
 .contactForm textarea {
 	width:100%;
 	height:120px;
@@ -639,7 +672,6 @@ p.introHeading {
 	margin-top:20px;
 	max-width:100%;
 	border:2px solid #378786 /*dark teal*/;
-
 }
 
 .contactForm .completeBtn {
@@ -676,18 +708,6 @@ p.introHeading {
 	font-weight:600;
 }
 
-.contact{
-	float: left;
-}
-
-.contactContainer {
-	height:700px;
-	width:800px;
-	max-width: 100%;
-	margin:auto;
-	margin-top: 30px;
-	margin-bottom:50px;
-}
 
 @media only screen and (max-width:930px){
 	.contact{
@@ -700,7 +720,7 @@ p.introHeading {
 		margin-top:50px;
 	}
 
-	.contactContainer {
+	.contactContainer, .loginContainer {
 		height:100%;
 		width:100%;
 	}
@@ -726,11 +746,19 @@ p.introHeading {
 
 
 /*-- Start of Login --*/
-
+.loginContainer {
+	height:450px;
+	width:880px;
+	max-width: 100%;
+	margin:auto;
+	margin-top: 30px;
+	margin-bottom:50px;
+}
 
 .loginForm, .signUpForm {
 	border:2px solid #378786; /*dark teal*/
 	width:400px;
+	max-width: 100%;
 	padding:30px;
 	border-radius:3px;
 	margin:auto;
@@ -738,6 +766,12 @@ p.introHeading {
 
 .loginForm {
 	border:2px solid #ff8500; /*orange*/
+}
+
+.login {
+	width:400px;
+	max-width: 100%;
+	margin:auto;
 }
 
 .loginForm input[type='text'], .signUpForm input[type='text'] {
@@ -802,20 +836,10 @@ p.introHeading {
 	color: #378786 /*dark teal*/;
 }
 
-.loginContainer {
-	height: 500px;
-	width: 1200px;
-	max-width: 100%;
-	margin: auto;
-	margin-top: 50px;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}
 
 .loginContainer h3 {
 	font-size: 24pt;
 	font-weight: 700;
-	margin-left: 100px;
 	margin-bottom: 10px;
 }
 
@@ -830,10 +854,57 @@ p.introHeading {
 .signUp p {
 	color: #000;
 	width: 350px;
+	max-width: 100%;
 	font-weight: bold;
 	line-height: 25px;
 	margin-bottom: 25px;
 }
+
+@media only screen and (max-width:930px){
+	.loginContainer {
+		height:100%;
+		width:400px;
+		max-width: 100%;
+	}
+
+	.signUp  {
+		margin-top:50px;
+		max-width: 100%;
+	}
+}
+
+@media only screen and (max-width:600px){
+	.loginContainer {
+		width:350px;
+	}
+	
+	.loginContainer h3 {
+		font-size:30px;
+		margin-bottom:20px;
+	}
+
+	.contactInfo p{
+		font-size:16px;
+	}
+
+}
+
+@media only screen and (max-width:500px){
+	.loginContainer {
+		width:300px;
+	}
+	
+	.loginContainer h3 {
+		font-size:30px;
+		margin-bottom:20px;
+	}
+
+	.contactInfo p{
+		font-size:16px;
+	}
+
+}
+
 
 /*-- End of Login --*/
 
