@@ -979,11 +979,7 @@ p.introHeading {
 	width:340px;
 	max-width: 100%;
 	margin:20px;
-}
-
-.hospitalsThumb img {
-	width:200px;
-	margin-bottom:10px;
+	height:320px;
 }
 
 .hospitalsThumb p {
@@ -997,6 +993,25 @@ p.location {
 	margin-bottom:30px;
 }
 
+.hospitalThumbImg {
+	position: relative;
+	display: inline-block;
+	height:150px;
+	overflow: hidden;
+	width: 200px;
+}
+.hospitalThumbImg img {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	overflow: hidden;
+}
+
 @media only screen and (max-width:930px){
 	.hospitalsContainer {
 		width:100%;
@@ -1008,6 +1023,13 @@ p.location {
 		margin:0;
 		margin:auto;
 		margin-bottom:50px;
+	}
+}
+
+@media only screen and (max-width:400px){
+	.hospitalsThumb {
+		width:80%;
+		padding:20px;
 	}
 }
 
@@ -1045,18 +1067,22 @@ p.location {
 	line-height: 1.5em;
 }
 
+.hospitalsProfile p.bio {
+	margin-bottom:20px;
+}
 .wishesContainer {
 	width:900px;
 	max-width: 100%;
 	position: relative;
 	margin:auto;
+	margin-bottom: 60px;
 }
 
 .wishesContainer .wish {
 	height:100px;
 }
 
-.wishesContainer h1{
+.wishesContainer h3{
 	font-size:40px;
 	color:#ff8500 /*orange*/;
 	font-weight:700;
@@ -1069,7 +1095,6 @@ p.location {
 	font-weight:600;
 }
 
-
 .wishesContainer .wish-btns{
 	float:right;
 	margin-top:-80px;
@@ -1079,11 +1104,12 @@ p.location {
 	margin-right:15px;
 }
 
-@media only screen and (max-width:930px){
-	.wishesContainer {
-		width:100%;
-	}
+.wishesContainer .yay-no-wishes {
+	width:300px;
+	max-width: 100%;
+}
 
+@media only screen and (max-width:930px){
 	.hospitalsProfile {
 		float:none;
 		width:100%;
@@ -1096,13 +1122,14 @@ p.location {
 	}
 
 	.hospitalsProfile p {
-		width:400px;
+		width:80%;
 		max-width: 100%;
 		margin:auto;
 	}
 
 	.wishesContainer {
 		width:80%;
+		margin-bottom: 100px;
 	}
 
 	.wishesContainer .wish {
@@ -1118,6 +1145,10 @@ p.location {
 		margin-top:0px;
 		margin-bottom: 50px;
 		border-bottom:1px solid lightgrey;
+	}
+
+	.wishesContainer .yay-no-wishes {
+		margin-bottom:100px;
 	}
 
 }
