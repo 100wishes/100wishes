@@ -107,5 +107,14 @@ Class PagesController extends MainController {
 		$content = $this->showview('signup', $arrData);
 		include('templates/pages.php');
 	}
+	public function editprofile() {
+		$pID = 8;
+		// $this->checkClient();
+		$arrData['nav'] = MainNav::makeNav();
+		$arrData['page'] = GetPage::getPageInfo($pID);
+
+		$content = $this->showview('editprofile', $arrData);
+		include('templates/pages.php');
+	}
 }
-?>
+?> 
