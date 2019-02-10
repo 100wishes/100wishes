@@ -34,6 +34,6 @@
 				<input type="submit" value="Save Changes" class="completeBtn"> 
 				<a href="#" class="btn-primary-reverse">Cancel</a>
 			</form>
-		</div><!--signUpForm-->	
+		</div><!--editProfile-->	
 	</div><!--signUpDetails-->
-</div><!--signUpContainer-->
+</div><!--editProfileContainer-->

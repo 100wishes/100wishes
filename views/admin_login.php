@@ -1,4 +1,6 @@
 <form method="post" action="" id="login" autocomplete="off">
+	<img src="images/logo.svg" alt="Wish League Admin Area"/>
+	<h1>Log In</h1>
 	<div class="blockfield">
 		<label>E-mail:</label>
 		<input type="text" class="required" id="cms-email" name="strEmail" placeholder="email">
@@ -9,7 +11,7 @@
 		<input type="password" class="required" id="cms-pass" name="strPassword" placeholder="password">
 	</div><!--//blockfield-->
 	
-	<input id="submitForm" class="btn main" type="submit" value="Login">
+	<input id="submitForm" class="btn-primary" type="submit" value="Log In">
 </form><!--//login form-->
 
 <?php
@@ -17,6 +19,6 @@
 
 	if ($_GET["error"])
 	{
-		echo "<div class='msg errors'>You are not allowed to access this area.</div>";
+		echo "<div class='msgerror'>You are not allowed to access this area.</div>";
 	}
 ?>
