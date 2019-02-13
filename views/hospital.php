@@ -30,7 +30,7 @@ if($arrData['wishes']) {
 	
 			<div class="wish wish-btns">
 				<a href="" class="btn-primary fulfill">Fulfill</a>
-				<a href="" class="btn-primary-reverse">Add to missions</a>
+				<a href="index.php?controller=pages&action=addMission&wID=<?=$wish['id']?>" class="btn-primary-reverse">Add to missions</a>
 			</div><!--wish button-->
 	<?php
 	}
@@ -42,4 +42,6 @@ if($arrData['wishes']) {
 <?php
 }
 ?>
+
+<div id="modal"></div>
 </div><!--wishesContainer-->

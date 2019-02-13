@@ -1,6 +1,7 @@
 <?php
 include('../../connect_wishleague.php');
 include("libs/DBFactory.php");
+include("libs/Mission.php");
 include("controllers/mainController.php");
 include("controllers/pagesController.php");
 include("controllers/adminController.php");

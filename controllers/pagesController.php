@@ -75,7 +75,8 @@ Class PagesController extends MainController {
 		$content = $this->showview('profile', $arrData);
 		include('templates/pages.php');
 	}
-	public function missions() {
+
+	public function mission() {
 		$pID = 7;
 		$arrData['nav'] = MainNav::makeNav();
 		$arrData['page'] = GetPage::getPageInfo($pID);
@@ -83,21 +84,37 @@ Class PagesController extends MainController {
 		$content = $this->showview('missions', $arrData);
 		include('templates/pages.php');
 	}
-	public function booking() {
-		$pID = 10;
-		$arrData['nav'] = MainNav::makeNav();
-		$arrData['page'] = GetPage::getPageInfo($pID);
 
-		$content = $this->showview('booking', $arrData);
-		include('templates/pages.php');
-	}
-	public function thankyou() {
-		$pID = 10;
-		$arrData['nav'] = MainNav::makeNav();
-		$arrData['page'] = GetPage::getPageInfo($pID);
+	public function addMission() {
+		$oMission = new Mission();
+		$oMission-> addToMission($_GET['wID']);
 
-		$content = $this->showview('thankyou', $arrData);
-		include('templates/pages.php');
+		header("location: index.php?controller=pages&action=mission");
 	}
+
+	public function deleteMission() {
+		array_splice($_SESSION['arrMission'], $_GET["wish"], 1);
+
+		header("location: index.php?controller=pages&action=mission");
+	}
+
+	// public function booking() {
+	// Fulfill Wish
+	// smallhero2.jpg
+	// 	$pID = 10;
+	// 	$arrData['nav'] = MainNav::makeNav();
+	// 	$arrData['page'] = GetPage::getPageInfo($pID);
+
+	// 	$content = $this->showview('booking', $arrData);
+	// 	include('templates/pages.php');
+	// }
+	// public function thankyou() {
+	// 	$pID = 10;
+	// 	$arrData['nav'] = MainNav::makeNav();
+	// 	$arrData['page'] = GetPage::getPageInfo($pID);
+
+	// 	$content = $this->showview('thankyou', $arrData);
+	// 	include('templates/pages.php');
+	// }
 }
 ?>

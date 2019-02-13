@@ -18,7 +18,7 @@
 		include('views/nav.php');
 	?>
 		<div class="headerIcons">
-			<span class="iconMissions"><a href="index.php?controller=pages&amp;action=missions">
+			<span class="iconMissions"><a href="index.php?controller=pages&amp;action=mission">
 				<img src="images/iconMissions.png" alt="iconMissions" class="iconMissionsImg">
 				<p>Missions</p></a>
 			</span><!--iconMissions-->

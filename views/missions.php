@@ -12,38 +12,35 @@
 	</div><!--// missions-heading-->
 
 	<div id="wishlist">
+<?php
+	if(empty($_SESSION["arrMission"])) {
+?>
 		<div class="wish-item">
-			<div>
-				<a href="#"><span class="fas fa-minus-circle"></span></a>
-				<p>"I want to meet Batman."</p>
-			</div>
-			<p>St. Mary's Hospital</p>
-			<a href="#" class="fulfillBtn">Fulfill</a>
-		</div><!--//wish-->
-		<div class="wish-item">
-			<div>
-				<a href="#"><span class="fas fa-minus-circle"></span></a>
-				<p>"I want a toy truck."</p>
-			</div>
-			<p>Mount George Hospital</p>
-			<a href="#" class="fulfillBtn">Fulfill</a>
-		</div><!--//wish-->
-		<div class="wish-item">
-			<div>
-				<a href="#"><span class="fas fa-minus-circle"></span></a>
-				<p>"I wish to see the Avengers movie."</p>
-			</div>
-			<p>St. Joseph Children's Hospital</p>
-			<a href="#" class="fulfillBtn">Fulfill</a>
-		</div><!--//wish-->
-		<div class="wish-item">
-			<div>
-				<a href="#"><span class="fas fa-minus-circle"></span></a>
-				<p>"I would like to make slime."</p>
-			</div>
-			<p>St. Andrew's Children's Hospital</p>
-			<a href="#" class="fulfillBtn">Fulfill</a>
-		</div><!--//wish-->
+			<p>No missions added.</p>
+		</div>
+<?php
+	} else {
+		$arrWish = $_SESSION["arrMission"];
+		$arrNb = 0;
+		$a = 1;
+
+		foreach ($arrWish as $mission) {
+	?>
+			<div class="wish-item">
+				<div>
+					<a href="index.php?controller=pages&action=deleteMission&&wish=<?=$arrNb?>"><span class="fas fa-minus-circle"></span></a>
+					<p><?=$mission['strWish']?></p>
+				</div>
+				<p><?=$mission['hospName']?></p>
+				<a href="#" class="fulfillBtn">Fulfill</a>
+			</div><!--//wish-->
+<?php
+			$arrNb += $a;
+		}
+	}
+?>
 	</div><!--//wishlist-->
+
+	<div id="modal"></div>
 
 </div><!--//missions-->
