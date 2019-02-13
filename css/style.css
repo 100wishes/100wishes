@@ -7,7 +7,7 @@ Montserrat 400 regular, 600 semi-bold, 700 bold*/
 #ffc200 yellow
 #ff8500 orange*/
 
-*{
+* {
 	margin:0;
 	padding:0;
 	font-family:'Montserrat', sans-serif;
@@ -34,7 +34,6 @@ body {
 	margin-left:70px;
 	padding-top:25px;
 }
-
 
 header {
 	width:100%;
@@ -66,17 +65,27 @@ nav {
 	padding-top:80px;
 	float:none;
 	display: inline-block;
-}
+} 
 
 nav a {
 	font-size:20px;
 	margin:10px;
 }
 
+nav a:hover, .headerIcons a:hover {
+	color:#ff8500 /*orange*/;
+}
+
 .headerIcons {
 	padding-top:50px;
 	float:right;
 	padding-right:70px;
+	display: block;
+}
+
+.headerIcons img {
+	display: block;
+	margin: auto;
 }
 
 .headerIcons a {
@@ -94,11 +103,12 @@ nav a {
 }
 
 footer {
-	background:#fff;
-	width:100%;
-	position:absolute;
-	box-shadow:0px 0px 20px 1px #378786 /*dark teal*/;
-	bottom:0;
+	background: #fff;
+	width: 100%;
+	position: absolute;
+	box-shadow: 0px 0px 20px 1px #378786 /*dark teal*/;
+	bottom: 0;
+	height: 130px;
 }
 
 .iconStar {
@@ -169,7 +179,7 @@ footer #socialNav .fab:hover {
 	border:none;
 	font-size:20px;
 	padding: 10px 40px;
-	border:2px solid #378786 /*dark teal*/;
+	border:2px solid #378786; /*dark teal*/
 	background:#fff;
 	margin-bottom:20px;
 	font-weight:600;
@@ -178,9 +188,9 @@ footer #socialNav .fab:hover {
 	height:50px;
 }
 
-.btn-secondary:hover, .btn-primary-reverse:hover, .homeIntroBtn:hover {
+.btn-secondary:hover, .btn-primary-reverse:hover{
 	color:#fff;
-	background:#ff8500 /*orange*/;
+	background: #378786; /*dark teal*/
 }
 
 @media only screen and (max-width:930px){
@@ -306,8 +316,6 @@ footer #socialNav .fab:hover {
 
 }
 
-
-
 /*-- Start of Home --*/
 
 /*#home {
@@ -360,7 +368,7 @@ p.heroText{
 	font-size:20px;
 }
 
-.heroTextContainer a:hover {
+.heroTextContainer a:hover{
 	background:#4fccc6 /*light turquoise*/;
 }
 
@@ -408,8 +416,18 @@ p.introHeading {
 }
 
 .homeIntroBtn {
+	color:#fff;
+	padding:10px 40px;
+	font-weight:600;
+	border-radius:3px;
+	font-size:16px;
 	border:2px solid #fff;
 	background: none;
+}
+
+.homeIntroBtn:hover {
+	background:#4fccc6 /*light turquoise*/;
+	border:none;
 }
 
 
@@ -518,8 +536,6 @@ p.introHeading {
 
 
 
-
-
 /*-- Start of Small Hero --*/
 
 #smallHero {
@@ -608,6 +624,20 @@ p.introHeading {
 
 
 /*-- Start of Contact --*/
+
+.contactContainer {
+	height:700px;
+	width:800px;
+	max-width: 100%;
+	margin:auto;
+	margin-top: 30px;
+	margin-bottom:50px;
+}
+
+.contact{
+	float: left;
+}
+
 .contactForm {
 	border:2px solid #378786 /*dark teal*/;
 	width:400px;
@@ -633,7 +663,6 @@ p.introHeading {
 	font-weight:600;
 }
 
-
 .contactForm textarea {
 	width:100%;
 	height:120px;
@@ -643,7 +672,6 @@ p.introHeading {
 	margin-top:20px;
 	max-width:100%;
 	border:2px solid #378786 /*dark teal*/;
-
 }
 
 .contactForm .completeBtn {
@@ -680,18 +708,6 @@ p.introHeading {
 	font-weight:600;
 }
 
-.contact{
-	float: left;
-}
-
-.contactContainer {
-	height:700px;
-	width:800px;
-	max-width: 100%;
-	margin:auto;
-	margin-top: 30px;
-	margin-bottom:50px;
-}
 
 @media only screen and (max-width:930px){
 	.contact{
@@ -704,7 +720,7 @@ p.introHeading {
 		margin-top:50px;
 	}
 
-	.contactContainer {
+	.contactContainer, .loginContainer {
 		height:100%;
 		width:100%;
 	}
@@ -730,11 +746,19 @@ p.introHeading {
 
 
 /*-- Start of Login --*/
+.loginContainer .editProfileContainer {
+	height:450px;
+	width:880px;
+	max-width: 100%;
+	margin:auto;
+	margin-top: 30px;
+	margin-bottom:50px;
+}
 
-
-.loginForm, .signUpForm {
+.loginForm, .signUpForm, .editProfile {
 	border:2px solid #378786; /*dark teal*/
 	width:400px;
+	max-width: 100%;
 	padding:30px;
 	border-radius:3px;
 	margin:auto;
@@ -744,7 +768,13 @@ p.introHeading {
 	border:2px solid #ff8500; /*orange*/
 }
 
-.loginForm input[type='text'], .signUpForm input[type='text'] {
+.login {
+	width:400px;
+	max-width: 100%;
+	margin:auto;
+}
+
+.loginForm input[type='text'], .signUpForm input[type='text'], .editProfile input[type='text'] {
 	width:100%;
 	margin-bottom:30px;
 	max-width:100%;
@@ -757,7 +787,7 @@ p.introHeading {
 	border-bottom:2px solid #ff8500; /*orange*/
 }
 
-.loginForm label, .signUpForm label {
+.loginForm label, .signUpForm label, .editProfile label {
 	font-size:20px;
 	display:block;
 	margin-top:20px;
@@ -768,16 +798,17 @@ p.introHeading {
 	color: #ff8500; /*orange*/
 }
 
-.signUpForm .completeBtn {
+.signUpForm .completeBtn, .editProfile .completeBtn {
 	border:none;
 	font-size:20px;
 	padding: 10px 40px;
 	border:2px solid #378786 /*dark teal*/;
-	background:#fff;
+	background: #378786 /*dark teal*/;
 	margin-bottom:20px;
 	font-weight:600;
 	border-radius:3px;
 	cursor: pointer;
+	color: #fff;
 }
 
 .loginForm .completeBtn {
@@ -800,25 +831,25 @@ p.introHeading {
 	border:2px solid #ff8500; /*orange*/
 }
 
-.signUpForm .completeBtn:hover {
-	background:#378786 /*dark teal*/;
-	color:#fff;
+.signUpForm .completeBtn:hover, .editProfile .completeBtn:hover {
+	background: #fff;
+	color: #378786 /*dark teal*/;
 }
 
-.loginContainer {
-	height:750px;
-	width: 1200px;
-	max-width: 100%;
-	margin: auto;
-	margin-top: 20px;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+.editProfile .btn-primary-reverse {
+	padding: 10px 40px;
+	font-size: 20px;
 }
+
+.editProfile .btn-primary-reverse:hover {
+	color: #fff;
+	background: #ff8500; /*orange*/
+}
+
 
 .loginContainer h3 {
 	font-size: 24pt;
 	font-weight: 700;
-	margin-left: 100px;
 	margin-bottom: 10px;
 }
 
@@ -826,7 +857,99 @@ p.introHeading {
 	color: #ff8500; /*orange*/
 }
 
+.signUp h3, .editProfile h3 {
+	margin-left: 0px;
+}
+
+.signUp p {
+	color: #000;
+	width: 350px;
+	max-width: 100%;
+	font-weight: bold;
+	line-height: 25px;
+	margin-bottom: 25px;
+}
+
+@media only screen and (max-width:930px){
+	.loginContainer {
+		height:100%;
+		width:400px;
+		max-width: 100%;
+	}
+
+	.signUp, .editProfile  {
+		margin-top:50px;
+		max-width: 100%;
+	}
+}
+
+@media only screen and (max-width:600px){
+	.loginContainer {
+		width:350px;
+	}
+	
+	.loginContainer h3 {
+		font-size:30px;
+		margin-bottom:20px;
+	}
+
+	.contactInfo p{
+		font-size:16px;
+	}
+
+}
+
+@media only screen and (max-width:500px){
+	.loginContainer {
+		width:300px;
+	}
+	
+	.loginContainer h3 {
+		font-size:30px;
+		margin-bottom:20px;
+	}
+
+	.contactInfo p{
+		font-size:16px;
+	}
+
+}
+
+
 /*-- End of Login --*/
+
+
+
+
+/*--Start of Sign Up--*/
+
+.signUpContainer, .editProfileContainer {
+	height: 1050px;
+	width: 1200px;
+	max-width: 100%;
+	margin: auto;
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.signUpDetails h3 {
+	font-size: 24pt;
+	font-weight: 700;
+	margin-left: 100px;
+	margin-bottom: 10px;
+}
+
+.signUpForm, .editProfile {
+	width: 600px;
+	margin-left: 100px;
+}
+
+
+
+/*--End of Sign Up--*/
+
+
 
 
 /*-- Start of Profile --*/
@@ -937,11 +1060,7 @@ p.introHeading {
 	width:340px;
 	max-width: 100%;
 	margin:20px;
-}
-
-.hospitalsThumb img {
-	width:200px;
-	margin-bottom:10px;
+	height:320px;
 }
 
 .hospitalsThumb p {
@@ -955,6 +1074,25 @@ p.location {
 	margin-bottom:30px;
 }
 
+.hospitalThumbImg {
+	position: relative;
+	display: inline-block;
+	height:150px;
+	overflow: hidden;
+	width: 200px;
+}
+.hospitalThumbImg img {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	overflow: hidden;
+}
+
 @media only screen and (max-width:930px){
 	.hospitalsContainer {
 		width:100%;
@@ -966,6 +1104,13 @@ p.location {
 		margin:0;
 		margin:auto;
 		margin-bottom:50px;
+	}
+}
+
+@media only screen and (max-width:400px){
+	.hospitalsThumb {
+		width:80%;
+		padding:20px;
 	}
 }
 
@@ -1003,18 +1148,22 @@ p.location {
 	line-height: 1.5em;
 }
 
+.hospitalsProfile p.bio {
+	margin-bottom:20px;
+}
 .wishesContainer {
 	width:900px;
 	max-width: 100%;
 	position: relative;
 	margin:auto;
+	margin-bottom: 60px;
 }
 
 .wishesContainer .wish {
 	height:100px;
 }
 
-.wishesContainer h1{
+.wishesContainer h3{
 	font-size:40px;
 	color:#ff8500 /*orange*/;
 	font-weight:700;
@@ -1027,7 +1176,6 @@ p.location {
 	font-weight:600;
 }
 
-
 .wishesContainer .wish-btns{
 	float:right;
 	margin-top:-80px;
@@ -1037,11 +1185,12 @@ p.location {
 	margin-right:15px;
 }
 
-@media only screen and (max-width:930px){
-	.wishesContainer {
-		width:100%;
-	}
+.wishesContainer .yay-no-wishes {
+	width:300px;
+	max-width: 100%;
+}
 
+@media only screen and (max-width:930px){
 	.hospitalsProfile {
 		float:none;
 		width:100%;
@@ -1054,13 +1203,14 @@ p.location {
 	}
 
 	.hospitalsProfile p {
-		width:400px;
+		width:80%;
 		max-width: 100%;
 		margin:auto;
 	}
 
 	.wishesContainer {
 		width:80%;
+		margin-bottom: 100px;
 	}
 
 	.wishesContainer .wish {
@@ -1076,6 +1226,10 @@ p.location {
 		margin-top:0px;
 		margin-bottom: 50px;
 		border-bottom:1px solid lightgrey;
+	}
+
+	.wishesContainer .yay-no-wishes {
+		margin-bottom:100px;
 	}
 
 }

@@ -20,13 +20,13 @@
 		<div class="headerIcons">
 			<span class="iconMissions"><a href="index.php?controller=pages&amp;action=mission">
 				<img src="images/iconMissions.png" alt="iconMissions" class="iconMissionsImg">
-				<p>Missions</p></a>
+				Missions</a>
 			</span><!--iconMissions-->
 
 			<span><a href="index.php?controller=pages&amp;action=profile">
 			<span class="iconProfile"><a href="index.php?controller=pages&amp;action=profile">
 				<img src="images/iconProfile.png" alt="iconProfile" class="iconProfileImg">
-				<p>Profile</p></a>
+				Profile</a>
 			</span><!--iconProfile-->
 		</div><!--headerIcons-->
 	</header>

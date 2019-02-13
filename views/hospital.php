@@ -11,10 +11,10 @@
 	</div><!--hospitalsProfile-->
 
 	<div class="hospitalsProfile">
-		<p><?=$arrData['hospital']['strBio']?></p>
-		<p><?=$arrData['hospital']['nPhone']?></p>
-		<p><?=$arrData['hospital']['strEmail']?></p>
-		<p><?=$arrData['hospital']['strAddress']?>, <?=$arrData['hospital']['strCity']?>, <?=$arrData['hospital']['province']?></p>
+		<p class="bio"><?=$arrData['hospital']['strBio']?></p>
+		<p class="phone"><?=$arrData['hospital']['nPhone']?></p>
+		<p class="email"><?=$arrData['hospital']['strEmail']?></p>
+		<p class="address"><?=$arrData['hospital']['strAddress']?>, <?=$arrData['hospital']['strCity']?>, <?=$arrData['hospital']['province']?></p>
 	</div><!--hospitalsProfile-->
 </div><!--hospitalsProfileContainer-->
 
@@ -37,7 +37,7 @@ if($arrData['wishes']) {
 } else {
 ?>
 	<div class="wish">
-		<p>Yay! All the wishes were fulfilled.</p>
+		<img src="images/yay-no-wishes.png" alt="yay-no-wishes" class="yay-no-wishes">
 	</div><!--wish-->
 <?php
 }

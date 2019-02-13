@@ -10,7 +10,7 @@
 foreach($arrData['hospitals'] as $hospital) {
 ?>
 	<div class="hospitalsThumb">
-		<a href="index.php?controler=pages&amp;action=hospital&amp;hID=<?=$hospital['id']?>"><img src="assets/<?=$hospital['strPhoto']?>" alt="<?=$hospital['strName']?>" /></a>
+		<a href="index.php?controler=pages&amp;action=hospital&amp;hID=<?=$hospital['id']?>" class="hospitalThumbImg"><img src="assets/<?=$hospital['strPhoto']?>" alt="<?=$hospital['strName']?>" /></a>
 		<p><?=$hospital['strName']?></p>
 		<p class="location"><?=$hospital['strCity']?>, <?=$hospital['province']?></p>
 		<a href="index.php?controler=pages&amp;action=hospital&amp;hID=<?=$hospital['id']?>" class="btn-primary">View wishes</a>

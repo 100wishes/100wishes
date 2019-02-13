@@ -1,0 +1,131 @@
+/*Fonts
+Montserrat 400 regular, 600 semi-bold, 700 bold*/
+
+/*Colors
+#4fccc6 light turquoise
+#378786 dark teal
+#ffc200 yellow
+#ff8500 orange*/
+
+* {
+	margin:0;
+	padding:0;
+	font-family:'Montserrat', sans-serif;
+	box-sizing: border-box;
+	font-weight:400;
+	text-decoration: none;
+	transition:.3s ease;
+	list-style: none;
+	color:#378786 /*dark teal*/;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+	margin: 0 auto;
+}
+
+.btn-primary {
+	color:#fff;
+	background:#ff8500 /*orange*/;
+	padding:10px 40px;
+	font-weight:600;
+	border-radius:3px;
+	font-size:16px;
+	border:2px solid #ff8500 /*orange*/;
+}
+
+.btn-primary:hover {
+	background:#fff;
+	color:#ff8500 /*orange*/;
+}
+
+.btn-secondary {
+	border:none;
+	font-size: 16px;
+	padding: 10px 40px;
+	border:2px solid #378786; /*dark teal*/
+	background:#fff;
+	margin-bottom:20px;
+	font-weight:600;
+	border-radius:3px;
+	cursor: pointer;
+	height:50px;
+}
+
+.btn-secondary:hover {
+	color:#fff;
+	background: #378786; /*dark teal*/
+}
+
+/*--------------LOG IN--------------*/
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
+}
+
+#login {
+	align-self: center;
+	background: #fff;
+	padding: 30px;
+	height: 470px;
+	width: 400px;
+	border: 1px solid #eee;
+	-webkit-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+	-moz-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+	box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+}
+#login img {
+	margin-bottom: 40px;
+	width: 200px;
+	margin-left: 70px;
+}
+
+#login h1 {
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.blockfield {
+	height: 50px;
+}
+
+#login label {
+	font-size: 14pt;
+	display: inline-block;
+	width: 110px;
+}
+
+#login input {
+	height: 40px;
+	width: 220px;
+	border: 1px solid #378786; /*dark teal*/
+	padding-left: 10px;
+}
+
+#login input[type="submit"] {
+	padding: 10px 40px;
+	border-radius:3px;
+	font-size:16px;
+	border:2px solid #ff8500 /*orange*/;
+	cursor: pointer;
+	height: 55px;
+	width: 100%;
+	margin-top: 15px;
+}
+
+.msgerror {
+	background: #e60000;
+	position: absolute;
+	top: 160px;
+	padding: 15px;
+	width: 400px;
+	text-align: center;
+	color: #fff;
+	font-weight: 700;
+	border: 1px solid #b30000;
+	border-radius: 3px;
+}
