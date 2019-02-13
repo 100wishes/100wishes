@@ -32,6 +32,8 @@
 	<!-- //ajax Form -->
 	<script src="js/formValidation.js"></script> 
 	<!-- //form validation -->
+	<script src="js/openModal.js"></script> 
+	<!-- //open modal box for booking -->
 
 </body>
 </html>

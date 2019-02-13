@@ -1321,6 +1321,9 @@ p.location {
 
 
 /*--Start of Booking--*/
+#modal {
+	display: none;
+}
 
 #booking {
 	margin: 0 auto;

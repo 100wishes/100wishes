@@ -95,7 +95,14 @@ Class PagesController extends MainController {
 	public function deleteMission() {
 		array_splice($_SESSION['arrMission'], $_GET["wish"], 1);
 
-		header("location: index.php?controller=pages&action=mission");
+		if(isset($_SERVER['HTTP_REFERER'])) {
+		    $previous = $_SERVER['HTTP_REFERER'];
+
+		    header("location: ".$previous);
+		} else {
+			header("location: index.php?controller=pages&action=mission");
+		}
+		
 	}
 
 	// public function booking() {

@@ -26,7 +26,7 @@ Class GetWishes {
 	}
 
 	static function getWishAdd($wID) {
-		$sql = "SELECT wishes.*, hospitals.strName FROM wishes LEFT JOIN hospitals ON wishes.nHospitalID = hospitals.id  WHERE wishes.id = ".$wID;
+		$sql = "SELECT wishes.*, hospitals.id AS hID, hospitals.strName FROM wishes LEFT JOIN hospitals ON wishes.nHospitalID = hospitals.id  WHERE wishes.id = ".$wID;
 		return DBFactory::newData()->runSql("getData", $sql);
 	}
 }
