@@ -1409,8 +1409,8 @@ p.location {
 /*--End of Booking--*/
 
 /*--Start of Thank You--*/
-
 #thankyou {
+	display: none;
 	margin: 0 auto;
 	margin-top: 50px;
 	width: 600px;

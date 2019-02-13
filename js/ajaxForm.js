@@ -59,4 +59,30 @@ $(function(){
 		}
 	return false;
 	});
+
+	$("#btn-bookForm").on("click", function(){
+		$validation = validateForm();
+		if($validation == true)
+		{
+			$.ajax(
+			{	
+				url: "models/submitBooking.php",
+				method: "POST",	
+				data: 
+				{
+					strWish: $("#formWish").val(),
+					nUserID: $("#user").val()
+				},				
+				success: function(result)
+				{
+					$('#thankyou').css('display', 'block');
+				},
+				error: function(a, b, error)
+				{
+					console.log(error);
+				}
+			});
+		}
+		return false;
+	});
 });

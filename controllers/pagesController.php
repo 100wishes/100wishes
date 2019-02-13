@@ -99,8 +99,7 @@ Class PagesController extends MainController {
 	}
 
 	// public function booking() {
-	// Fulfill Wish
-	// smallhero2.jpg
+
 	// 	$pID = 10;
 	// 	$arrData['nav'] = MainNav::makeNav();
 	// 	$arrData['page'] = GetPage::getPageInfo($pID);
