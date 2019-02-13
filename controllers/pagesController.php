@@ -105,24 +105,6 @@ Class PagesController extends MainController {
 		
 	}
 
-	// public function booking() {
-
-	// 	$pID = 10;
-	// 	$arrData['nav'] = MainNav::makeNav();
-	// 	$arrData['page'] = GetPage::getPageInfo($pID);
-
-	// 	$content = $this->showview('booking', $arrData);
-	// 	include('templates/pages.php');
-	// }
-	// public function thankyou() {
-	// 	$pID = 10;
-	// 	$arrData['nav'] = MainNav::makeNav();
-	// 	$arrData['page'] = GetPage::getPageInfo($pID);
-
-	// 	$content = $this->showview('thankyou', $arrData);
-	// 	include('templates/pages.php');
-	// }
-
 	// public function signup() {
 	// 	$pID = 9;
 	// 	$arrData['nav'] = MainNav::makeNav();
