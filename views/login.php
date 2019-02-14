@@ -26,6 +26,6 @@
 	<div class="signUp contact contactInfo">
 		<h3>Sign Up</h3>
 		<p>Don’t have an account yet? Sign up now to start fulfilling wishes.</p>
-		<a href="#" class="btn-secondary">Sign Up Now</a>
+		<a href="index.php?controller=pages&action=signup" class="btn-secondary">Sign Up Now</a>
 	</div><!--signUp-->
 </div><!--loginContainer-->

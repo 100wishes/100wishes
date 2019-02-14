@@ -102,26 +102,26 @@ Class PagesController extends MainController {
 		} else {
 			header("location: index.php?controller=pages&action=mission");
 		}
-		
 	}
 
-	// public function signup() {
-	// 	$pID = 9;
-	// 	$arrData['nav'] = MainNav::makeNav();
-	// 	$arrData['page'] = GetPage::getPageInfo($pID);
+	public function signup() {
+		$pID = 9;
+		$arrData['nav'] = MainNav::makeNav();
+		$arrData['page'] = GetPage::getPageInfo($pID);
+		$arrData['provinces'] = GetProvince::showProvinces();
 
-	// 	$content = $this->showview('signup', $arrData);
-	// 	include('templates/pages.php');
-	// }
+		$content = $this->showview('signup', $arrData);
+		include('templates/pages.php');
+	}
 	
-	// public function editprofile() {
-	// 	$pID = 8;
-	// 	// $this->checkClient();
-	// 	$arrData['nav'] = MainNav::makeNav();
-	// 	$arrData['page'] = GetPage::getPageInfo($pID);
+	public function editprofile() {
+		$pID = 8;
+		// $this->checkClient();
+		$arrData['nav'] = MainNav::makeNav();
+		$arrData['page'] = GetPage::getPageInfo($pID);
 
-	// 	$content = $this->showview('editprofile', $arrData);
-	// 	include('templates/pages.php');
-	// }
+		$content = $this->showview('editprofile', $arrData);
+		include('templates/pages.php');
+	}
 }
 ?> 

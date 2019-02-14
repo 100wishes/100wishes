@@ -9,29 +9,37 @@
 	<div class="signUpDetails">
 		<h3>Create Account</h3>
 		<div class="signUpForm">
-			<form method="post" action="saveContact.php" onsubmit="return validateForm()">
-				<label>First Name</label>
-				<input type="text" name="strFirstName" class="requiredField" id="strFirstName">
+			<form id="clientSiteForm" method="post" action="">
+				<label>First Name:</label>
+				<input class="required" type="text" id="firstName" name="strFirstName" />
 
-				<label>Last Name</label>
-				<input type="text" name="strLastName" class="requiredField" id="strLastName">
-				
-				<label>Email Address</label>
-				<input type="text" name="strEmail" class="requiredField" id="strEmail">
+				<label>Last Name:</label>
+				<input class="required" type="text" id="lastName" name="strLastName" />
 
-				<label>Password</label>
-				<input type="text" name="strPassword" class="requiredField" id="strPassword">
+				<label>E-mail:</label>
+				<input class="required" type="email" id="email" name="strEmail" />
 
-				<label>Phone Number</label>
-				<input type="text" name="nPhone" class="requiredField" id="nPhone">
+				<label>Password:</label>
+				<input type="password" class="required" id="password" name="strPassword" />
 
-				<label>City</label>
-				<input type="text" name="strCity" class="requiredField" id="strCity">
+				<label>Phone Number:</label>
+				<input type="text" class="required" id="phone" name="nPhone" />
 
-				<label>Province</label>
-				<input type="text" name="nProvinceID" class="requiredField" id="nProvinceID">
+				<label>City:</label>
+				<input type="text" class="required" id="city" name="strCity" />
 
-				<input type="submit" value="Sign Up" class="completeBtn"> 
+				<label>Province:</label>
+				<select id="province" name="nProvinceID" class="required">
+				<?php
+					foreach ($arrData['provinces'] as $province) {
+				?>
+					<option value="<?=$province["id"]?>"><?=$province["strName"]?></option>
+				<?php
+					}
+				?>
+				</select>
+
+				<input id="btn-clientSiteForm" type="submit" name="submit" value="Sign Up" class="completeBtn" /> 
 			</form>
 		</div><!--signUpForm-->	
 	</div><!--signUpDetails-->

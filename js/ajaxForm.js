@@ -85,4 +85,35 @@ $(function(){
 		}
 		return false;
 	});
+
+	$("#btn-clientSiteForm").on("click", function(){
+		$validation = validateForm();
+		if($validation == true)
+		{
+			$.ajax(
+			{	
+				url: "models/saveUser.php",
+				method: "POST",	
+				data: 
+				{
+					strEmail: $("#email").val(),
+					strPassword: $("#password").val(),
+					strFirstName: $("#firstName").val(),
+					strLastName: $("#lastName").val(),
+					nPhone: $("#phone").val(),
+					nProvinceID: $("#province").val(),
+					strCity: $("#city").val()
+				},				
+				success: (result) =>
+				{
+					window.location = "index.php?controller=pages&action=login";
+				},
+				error: (a, b, error) =>
+				{
+					console.log(error);
+				}
+			});
+		}
+	return false;
+	});
 });
