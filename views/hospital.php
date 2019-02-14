@@ -94,7 +94,7 @@ if($arrData['wishes']) {
 						</div>
 						<label>Message:</label>
 						<textarea></textarea>
-						<input type="submit" id="btn-bookForm" class="fulfillBtn" value="Book Now" />
+						<input type="submit" id="btn-bookForm" class="btn-primary" value="Book Now" />
 					</div><!--bookDate-->
 				<?php
 					}
