@@ -60,6 +60,37 @@ $(function(){
 	return false;
 	});
 
+	$("#loginForm").on("click", function(){
+		$validation = validateForm();
+		if($validation == true)
+		{
+			$.ajax(
+			{	
+				url: "models/checkSiteLogin.php",
+				method: "POST",	
+				data: 
+				{
+					strEmail: $("#email").val(),
+					strPassword: $("#password").val()
+				},				
+				success: (result) =>
+				{
+					if(result == true)
+					{
+						window.location = "index.php?controller=pages&action=profile";
+					} else {
+						$(".loginForm").append("<div class='msg errors'>Sorry, we couldn't find your account</div>");
+					}
+				},
+				error: (a, b, error) =>
+				{
+					console.log(error);
+				}
+			});
+		}
+	return false;
+	});
+
 	$("#btn-bookForm").on("click", function(){
 		$validation = validateForm();
 		if($validation == true)

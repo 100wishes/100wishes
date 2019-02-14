@@ -66,15 +66,6 @@ Class PagesController extends MainController {
 		$content = $this->showview('login', $arrData);
 		include('templates/pages.php');
 	}
-	public function profile() {
-		$pID = 8;
-		$this->checkClient();
-		$arrData['nav'] = MainNav::makeNav();
-		$arrData['page'] = GetPage::getPageInfo($pID);
-
-		$content = $this->showview('profile', $arrData);
-		include('templates/pages.php');
-	}
 
 	public function mission() {
 		$pID = 7;
@@ -113,10 +104,20 @@ Class PagesController extends MainController {
 		$content = $this->showview('signup', $arrData);
 		include('templates/pages.php');
 	}
+
+	public function profile() {
+		$pID = 8;
+		$this->checkClient();
+		$arrData['nav'] = MainNav::makeNav();
+		$arrData['page'] = GetPage::getPageInfo($pID);
+
+		$content = $this->showview('profile', $arrData);
+		include('templates/pages.php');
+	}
 	
 	public function editprofile() {
 		$pID = 8;
-		// $this->checkClient();
+		$this->checkClient();
 		$arrData['nav'] = MainNav::makeNav();
 		$arrData['page'] = GetPage::getPageInfo($pID);
 

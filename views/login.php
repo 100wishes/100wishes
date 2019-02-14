@@ -9,16 +9,15 @@
 	<div class="login contact">
 		<h3>Log In</h3>
 		<div class="loginForm">
-			<form method="post" onsubmit="return validateForm()">
+			<form method="post" action="" autocomplete="off">
 				
 				<label>Email Address</label>
-				<input type="text" name="strEmailAddress" class="requiredField" id="strEmail">
+				<input type="text" class="required" id="email" name="strEmail" />
 
 				<label>Password</label>
-				<input type="text" name="strPassword" class="requiredField" id="strPassword">
+				<input type="password" class="required" id="password" name="strPassword" />
 
-
-				<input type="submit" value="Log In" class="completeBtn"> 
+				<input id="loginForm" type="submit" value="Log In" class="completeBtn"> 
 			</form>
 		</div><!--loginForm-->	
 	</div><!--login-->

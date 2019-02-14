@@ -18,7 +18,7 @@ Class MainController {
 	}
 
 	public function checkClient() {
-		if (!isset($_SESSION["clientID"])) 
+		if (!isset($_SESSION["arrClient"])) 
 		{
 			header("location: index.php?controller=pages&action=login&error=true");
 			die;
