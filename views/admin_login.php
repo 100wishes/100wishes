@@ -1,3 +1,11 @@
+<?php
+	$_GET["error"] = (isset($_GET["error"]))?$_GET["error"]:"";
+
+	if ($_GET["error"])
+	{
+		echo "<div class='errormsg'>You are not allowed to access this area.</div>";
+	}
+?>
 <form method="post" action="" id="login" autocomplete="off">
 	<img src="images/logo.svg" alt="Wish League Admin Area"/>
 	<h1>Log In</h1>
@@ -13,12 +21,3 @@
 	
 	<input id="submitForm" class="btn-primary" type="submit" value="Log In">
 </form><!--//login form-->
-
-<?php
-	$_GET["error"] = (isset($_GET["error"]))?$_GET["error"]:"";
-
-	if ($_GET["error"])
-	{
-		echo "<div class='msgerror'>You are not allowed to access this area.</div>";
-	}
-?>

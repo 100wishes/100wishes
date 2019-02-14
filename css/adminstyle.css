@@ -117,10 +117,10 @@ html {
 	margin-top: 15px;
 }
 
-.msgerror {
+.errormsg {
 	background: #e60000;
 	position: absolute;
-	top: 160px;
+	margin-top: 60px;
 	padding: 15px;
 	width: 400px;
 	text-align: center;
@@ -129,3 +129,75 @@ html {
 	border: 1px solid #b30000;
 	border-radius: 3px;
 }
+
+/*----------NAV---------*/
+
+nav {
+	position: fixed;
+	left: 0;
+	top:0;
+	height: 100%;
+	width: 230px;
+	padding: 30px;
+	border-right: 1px solid #eee;
+	-webkit-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+	-moz-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+	box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+}
+nav img {
+	width: 160px;
+	margin-top: 20px;
+	margin-bottom: 80px;
+}
+nav li, a {
+	font-size: 14pt;
+	font-weight: 600;
+	font-weight: 500;
+	color: #378786; /*dark teal*/
+	margin-bottom: 20px;
+	width: 100%;
+}
+nav a:hover {
+	color: #ff8500; /*orange*/
+}
+
+/*-------------DASHBOARD-----------*/
+
+#welcome {
+	margin-left: 150px;
+	text-align: center;
+}
+#welcome h1 {
+	font-size: 40pt;
+	text-align: center;
+	margin-top: 120px;
+	color: #ff8500; /*orange*/
+}
+#welcome a {
+	color: #000;
+	font-size: 16pt;
+	letter-spacing: 1px;
+}
+#manage {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 50px;
+	width: 500px;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+#manage img {
+	height: 60px;
+	margin-bottom: 20px;
+}
+#manage > div {
+	padding: 40px 20px;
+	border-radius: 10%;
+	-webkit-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+	-moz-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+	box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+}
+#manage > div:hover {
+	border: 2px solid #ff8500; /*orange*/
+}
+
