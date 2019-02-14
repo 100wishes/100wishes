@@ -22,7 +22,11 @@
 	<h3>Wishes:</h3>
 <?php 
 if($arrData['wishes']) {
-	$arrWish = $_SESSION["arrMission"];
+	if(isset($_SESSION["arrMission"])) {
+		$arrWish = $_SESSION["arrMission"];
+	} else {
+		$arrWish = "";
+	}
 	$arrNb = 0;
 	$a = 1;
 
