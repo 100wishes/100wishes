@@ -8,7 +8,7 @@
 <div class="contactContainer">
 	<div class="contact">
 		<div class="contactForm">
-		<form id="contactForm" method="post" action="">
+		<form id="contactForm" method="post" action="sendForm.php" onsubmit="return validateForm()">
 			<label>Full Name</label>
 			<input class="required" type="text" id="name" name="strName" />
 			

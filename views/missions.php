@@ -33,7 +33,7 @@
 				</div>
 				<p><?=$mission['hospName']?></p>
 
-				<a href="#" data-id="<?=$mission['wID']?>" data-wish="<?=$mission['strWish']?>" data-hospital="<?=$mission['hospName']?>" data-hospid="<?=$mission['hID']?>" class="fulfillBtn fulfill">Fulfill</a>
+				<a href="#" data-id="<?=$mission['wID']?>" data-wish="<?=$mission['strWish']?>" data-hospital="<?=$mission['hospName']?>" data-hospid="<?=$mission['hID']?>" class="fulfillBtn">Fulfill</a>
 			</div><!--//wish-->
 <?php
 			$arrNb += $a;
@@ -45,7 +45,7 @@
 	<div id="modal">
 		<section id="booking">
 			<div id="bookingForm">
-				<img src="images/booking.jpg" alt="wish league"/>
+				<img src="images/booking.jpg" alt="booking-hero" class="booking-hero">
 
 				<form method="post" action="" class="bForm">
 				<?php
@@ -85,7 +85,7 @@
 						</div>
 						<label>Message:</label>
 						<textarea></textarea>
-						<input type="submit" id="btn-bookForm" class="fulfillBtn" value="Book Now" />
+						<input type="submit" id="btn-bookForm" class="btn-primary" value="Book Now" />
 					</div><!--bookDate-->
 				<?php
 					}
