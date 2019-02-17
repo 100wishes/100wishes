@@ -320,21 +320,35 @@ nav a:hover {
 	width: 300px;
 	height: 40px;
 	padding: 10px 20px;
-}
-.adminForm textarea {
-	width: 300px;
-	height: 200px;
+	border: 1px solid #378786; /*dark teal*/
 }
 .adminForm input[type="submit"] {
 	padding: 10px 20px;
 	width: 200px;
 	border-radius:3px;
 	font-size:16px;
-	border:2px solid #ff8500 /*orange*/;
+	border: 2px solid #ff8500 /*orange*/;
 	cursor: pointer;
 	height: 55px;
 	margin-top: 50px;
 }
+.adminForm textarea {
+	border: 1px solid #378786; /*dark teal*/
+	width: 300px;
+	height: 150px;
+}
+#hospForm {
+	padding-bottom: 100px;
+}
+input[type="file"] {
+	border: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.blockfield.bio {
+	height: 170px;
+}
+
 
 /*----------------EDIT WISH-----------------*/
 

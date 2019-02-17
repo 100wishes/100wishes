@@ -184,17 +184,17 @@ if(isset($_GET['hID'])) {
 	<form id="hospForm" method="post" action="index.php?controller=admin&action=save&hID=<?=$_GET['hID']?>" enctype="multipart/form-data">
 		<div>
 			<label>Logo:</label>
+			<?php
+			if($image) {
+			?>
+				<div class="editImg">
+					<img src="assets/<?=$image?>" alt="<?=$image?>" />
+					<input type="hidden" name="photo" value="<?=$image?>" />
+				</div>
+			<?php
+			}
+			?>
 			<input type="file" name="strPhoto" />
-		<?php
-		if($image) {
-		?>
-			<div class="editImg">
-				<img src="assets/<?=$image?>" alt="<?=$image?>" />
-				<input type="hidden" name="photo" value="<?=$image?>" />
-			</div>
-		<?php
-		}
-		?>
 		</div>
 		<div class="blockfield">
 			<label>Hospital Name:</label>
@@ -216,7 +216,7 @@ if(isset($_GET['hID'])) {
 			<input type="text" id="kids" name="nKids" value="<?=$kids?>" />
 		</div><!--blockfield-->
 
-		<div class="blockfield">
+		<div class="blockfield bio">
 			<label>Bio:</label>
 			<textarea id="bio" name="strBio"><?=$bio?></textarea>
 		</div><!--blockfield-->
