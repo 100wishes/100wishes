@@ -204,13 +204,13 @@ nav a:hover {
 
 /*---------USERS-------------*/
 
-#manageContent {
+.manageContent {
 	position: absolute;
 	left: 300px;
 	top: 100px;
 	width: 100%;
 }
-#manageContent h1 {
+.manageContent h1 {
 	font-weight: 700;
 	font-size: 30pt;
 	margin-bottom: 30px;
@@ -227,7 +227,7 @@ nav a:hover {
 	border-radius:3px;
 	cursor: pointer;
 	position: absolute;
-	margin-left: 350px;
+	margin-left: 180px;
 	margin-top: 5px;
 }
 .btn-action:hover {
@@ -235,7 +235,7 @@ nav a:hover {
 	background: #ff8500; /*orange*/
 }
 .btn-hospital {
-	margin-left: 630px;
+	margin-left: 500px;
 }
 .fa-trash-alt {
 	color: #e60000; /*red*/
@@ -243,19 +243,19 @@ nav a:hover {
 .fa-trash-alt:hover, .fa-edit:hover {
 	color: #000;
 }
-#manageContent p {
+.manageContent p {
 	display: inline-block;
 	margin-left: 10px;
 }
-#manageContent .list, #manageContent li {
+.manageContent .list, .manageContent li {
 	margin-bottom: 15px;
 }
-#manageContent img {
+.manageContent img {
 	width: 100px;
 	margin-left: 10px;
 	margin-right: 40px;
 }
-.list-wish {
+.list-wish, .list-hospitalname {
 	width: 280px;
 }
 .list-status {
@@ -278,10 +278,12 @@ nav a:hover {
 	width: 250px;
 	text-align: center;
 }
-.list-hospitalname {
+.list-client {
+	width: 200px;
+}
+.list-clientemail {
 	width: 250px;
 }
-
 
 /*-------------ADD-----------*/
 
@@ -336,6 +338,7 @@ nav a:hover {
 	border: 1px solid #378786; /*dark teal*/
 	width: 300px;
 	height: 150px;
+	padding: 10px;
 }
 #hospForm {
 	padding-bottom: 100px;

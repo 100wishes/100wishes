@@ -1,6 +1,6 @@
-<div id="manageContent">
+<div class="manageContent">
 	<a class="btn-action" href="index.php?controller=admin&action=add&uID=0">Add a User</a>
-	<h1>List of Users</h1>
+	<h1>Users</h1>
 	<?php
 	foreach($arrData['users'] as $user) {
 	?>

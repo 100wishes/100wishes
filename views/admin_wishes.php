@@ -1,4 +1,4 @@
-<div id="manageContent">
+<div class="manageContent">
 	<?php
 		if($_SESSION["bAdmin"] == 0) {
 	?>
@@ -6,7 +6,7 @@
 	<?php
 		}
 	?>
-	<h1>List of Wishes</h1>
+	<h1>Wishes</h1>
 
 	<div class="list">
 	<?php

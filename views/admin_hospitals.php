@@ -1,4 +1,4 @@
-<div id="manageContent">
+<div class="manageContent">
 <?php
 	if($_SESSION["bAdmin"] === "1") {
 ?>
@@ -6,7 +6,7 @@
 <?php
 	}
 ?>
-<h1>List of registered hospitals</h1>
+<h1>Registered hospitals</h1>
 <?php
 foreach($arrData['hospitals'] as $hospital) {
 ?>
