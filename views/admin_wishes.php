@@ -2,7 +2,7 @@
 	<?php
 		if($_SESSION["bAdmin"] == 0) {
 	?>
-		<a href="index.php?controller=admin&action=add&wID=0">Add a Wish</a>
+		<a class="btn-action" href="index.php?controller=admin&action=add&wID=0">Add a Wish</a>
 	<?php
 		}
 	?>
@@ -15,7 +15,7 @@
 	?>
 		<ul>
 			<li>
-				<a href="index.php?controller=admin&action=add&wID=<?=$wish['id']?>"><span class="far fa-edit"></a>
+				<a href="index.php?controller=admin&action=add&wID=<?=$wish['id']?>"><span class="far fa-edit"></span></a>
 				<a href="index.php?controller=admin&action=delete&wID=<?=$wish['id']?>"><span class="far fa-trash-alt"></span></a>
 				<p class="list-wish"><?=$wish['strWish']?></p>
 				<p class="list-status"><?=$wish['status']?></p>

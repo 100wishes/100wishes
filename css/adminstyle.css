@@ -234,6 +234,9 @@ nav a:hover {
 	color: #fff;
 	background: #ff8500; /*orange*/
 }
+.btn-hospital {
+	margin-left: 630px;
+}
 .fa-trash-alt {
 	color: #e60000; /*red*/
 }
@@ -246,6 +249,11 @@ nav a:hover {
 }
 #manageContent .list, #manageContent li {
 	margin-bottom: 15px;
+}
+#manageContent img {
+	width: 100px;
+	margin-left: 10px;
+	margin-right: 40px;
 }
 .list-wish {
 	width: 280px;
@@ -269,6 +277,9 @@ nav a:hover {
 .list-email {
 	width: 250px;
 	text-align: center;
+}
+.list-hospitalname {
+	width: 250px;
 }
 
 
