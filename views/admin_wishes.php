@@ -1,41 +1,46 @@
-<?php
-	if($_SESSION["bAdmin"] == 0) {
-?>
-	<a href="index.php?controller=admin&action=add&wID=0">Add a Wish</a>
-<?php
-	}
-?>
-<h1>List of Wishes</h1>
-<?php
-if ($arrData['wishes']) {
-	foreach ($arrData['wishes'] as $wish) {
-?>
-	<ul>
-		<li>
-			<p><?=$wish['strWish']?></p>
-			<p><?=$wish['status']?></p>
+<div id="manageContent">
 	<?php
-		if($_SESSION["bAdmin"] == 1) {
+		if($_SESSION["bAdmin"] == 0) {
 	?>
-			<p><?=$wish['strName']?></p>
+		<a href="index.php?controller=admin&action=add&wID=0">Add a Wish</a>
 	<?php
 		}
+	?>
+	<h1>List of Wishes</h1>
 
-		if($wish['nUserID'] != 0) {
+	<div class="list">
+	<?php
+	if ($arrData['wishes']) {
+		foreach ($arrData['wishes'] as $wish) {
 	?>
-			<p><?=$wish['strFirstName']?></p>
-			<p><?=$wish['nPhone']?></p>
-			<p><?=$wish['strEmail']?></p>
+		<ul>
+			<li>
+				<a href="index.php?controller=admin&action=add&wID=<?=$wish['id']?>"><span class="far fa-edit"></a>
+				<a href="index.php?controller=admin&action=delete&wID=<?=$wish['id']?>"><span class="far fa-trash-alt"></span></a>
+				<p class="list-wish"><?=$wish['strWish']?></p>
+				<p class="list-status"><?=$wish['status']?></p>
+		<?php
+			if($_SESSION["bAdmin"] == 1) {
+		?>
+				<p class="list-hospital"><?=$wish['strName']?></p>
+		<?php
+			}
+
+			if($wish['nUserID'] != 0) {
+		?>
+				<p class="list-name"><?=$wish['strFirstName']?></p>
+				<p class="list-phone"><?=$wish['nPhone']?></p>
+				<p class="list-email"><?=$wish['strEmail']?></p>
+		<?php
+			}
+		?>
+			</li>
+		</ul>
 	<?php
 		}
-	?>
-			<a href="index.php?controller=admin&action=add&wID=<?=$wish['id']?>">Edit</a>
-			<a href="index.php?controller=admin&action=delete&wID=<?=$wish['id']?>">Delete</a>
-		</li>
-	</ul>
-<?php
+	} else {
+		echo "No wishes added.";
 	}
-} else {
-	echo "No wishes added.";
-}
-?>
+	?>
+	</div><!--list-->
+</div><!--manageContent-->

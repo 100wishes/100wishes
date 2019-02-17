@@ -204,13 +204,13 @@ nav a:hover {
 
 /*---------USERS-------------*/
 
-#manageUsers {
+#manageContent {
 	position: absolute;
 	left: 300px;
 	top: 100px;
 	width: 100%;
 }
-#manageUsers h1 {
+#manageContent h1 {
 	font-weight: 700;
 	font-size: 30pt;
 	margin-bottom: 30px;
@@ -240,13 +240,37 @@ nav a:hover {
 .fa-trash-alt:hover, .fa-edit:hover {
 	color: #000;
 }
-#manageUsers p {
+#manageContent p {
 	display: inline-block;
 	margin-left: 10px;
 }
-#manageUsers .user {
+#manageContent .list, #manageContent li {
 	margin-bottom: 15px;
 }
+.list-wish {
+	width: 280px;
+}
+.list-status {
+	width: 150px;
+	text-align: center;
+}
+.list-hospital {
+	width: 200px;
+	text-align: center;
+}
+.list-name {
+	width: 120px;
+	text-align: center;
+}
+.list-phone {
+	width: 120px;
+	text-align: center;
+}
+.list-email {
+	width: 250px;
+	text-align: center;
+}
+
 
 /*-------------ADD-----------*/
 
