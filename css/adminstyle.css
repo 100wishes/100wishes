@@ -286,6 +286,14 @@ nav a:hover {
 .adminForm .blockfield {
 	height: 60px;
 }
+.adminForm .blockfield p {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.adminForm .blockfield p.user-email, .adminForm .blockfield p.user-phone {
+	display: block;
+	margin-left: 180px;
+}
 .adminForm label {
 	font-size: 14pt;
 	display: inline-block;
@@ -314,6 +322,11 @@ nav a:hover {
 	border:2px solid #ff8500 /*orange*/;
 	cursor: pointer;
 	height: 55px;
-	margin-top: 15px;
+	margin-top: 50px;
 }
+
+/*----------------EDIT WISH-----------------*/
+
+
+
 

@@ -63,7 +63,7 @@ if(isset($_GET['cID'])) {
 			<p>Wishes Fulfilled: <span><?=$client['nWishes'];?></span></p>
 		</div><!--blockfield-->
 
-		<input class="btn-primary" id="btn-clientForm" type="submit" name="submit" value="Save" />
+		<input class="btn-primary" class="btn-primary" id="btn-clientForm" type="submit" name="submit" value="Save" />
 	</form>
 </div><!--adminForm-->
 <?php
@@ -250,7 +250,7 @@ if(isset($_GET['hID'])) {
 			<input type="text" id="postal" name="strPostalCode" value="<?=$postal?>" />
 		</div><!--blockfield-->
 
-		<input id="btn-hospForm" type="submit" name="submit" value="Save" />
+		<input id="btn-hospForm" class="btn-primary" type="submit" name="submit" value="Save" />
 	</form>
 </div><!--adminForm-->
 <?php
@@ -318,16 +318,16 @@ if(isset($_GET['wID'])) {
 		?>
 			<div class="blockfield">
 				<label>Who Fulfilled:</label>
-				<p><?=$user?></p>
-				<p><?=$email?></p>
-				<p><?=$phone?></p>
+				<p class="user-name"><?=$user?></p>
+				<p class="user-email"><?=$email?></p>
+				<p class="user-phone"><?=$phone?></p>
 			</div><!--blockfield-->
 <?php
 		}
 	}
 ?>
 
-		<input id="btn-wishForm" type="submit" name="submit" value="Save" />
+		<input id="btn-wishForm" class="btn-primary" type="submit" name="submit" value="Save" />
 	</form>
 </div><!--adminForm-->
 <?php
