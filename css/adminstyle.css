@@ -118,15 +118,15 @@ html {
 }
 
 .errormsg {
-	background: #e60000;
+	background: #e60000; /*red*/
 	position: absolute;
-	margin-top: 60px;
+	top: 150px;
 	padding: 15px;
 	width: 400px;
 	text-align: center;
 	color: #fff;
 	font-weight: 700;
-	border: 1px solid #b30000;
+	border: 1px solid #b30000; /*red*/
 	border-radius: 3px;
 }
 
@@ -201,3 +201,49 @@ nav a:hover {
 	border: 2px solid #ff8500; /*orange*/
 }
 
+
+/*---------USERS-------------*/
+
+#manageUsers {
+	position: absolute;
+	left: 300px;
+	top: 100px;
+	width: 100%;
+}
+#manageUsers h1 {
+	font-weight: 700;
+	font-size: 30pt;
+	margin-bottom: 30px;
+}
+.btn-action {
+	display: inline-block;
+	width: auto;
+	font-size: 12pt;
+	padding: 8px 15px;
+	border: 2px solid #ff8500; /*orange*/
+	background: #fff;
+	color: #ff8500; /*orange*/
+	font-weight: 600;
+	border-radius:3px;
+	cursor: pointer;
+	position: absolute;
+	margin-left: 350px;
+	margin-top: 5px;
+}
+.btn-action:hover {
+	color: #fff;
+	background: #ff8500; /*orange*/
+}
+.fa-trash-alt {
+	color: #e60000; /*red*/
+}
+.fa-trash-alt:hover, .fa-edit:hover {
+	color: #000;
+}
+#manageUsers p {
+	display: inline-block;
+	margin-left: 10px;
+}
+#manageUsers .user {
+	margin-bottom: 15px;
+}

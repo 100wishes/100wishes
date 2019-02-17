@@ -48,7 +48,7 @@ Class AdminController extends MainController {
 	}
 
 	public function users() {
-		$this->checkUser();
+		// $this->checkUser();
 		$hID = $_SESSION["hospitalID"];
 		$adm = $_SESSION["bAdmin"];
 
