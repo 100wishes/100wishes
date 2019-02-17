@@ -247,3 +247,49 @@ nav a:hover {
 #manageUsers .user {
 	margin-bottom: 15px;
 }
+
+/*-------------ADD-----------*/
+
+.adminForm {
+	margin-left: -500px;
+	margin-top: 100px;
+}
+.adminForm h1 {
+	font-weight: 700;
+	font-size: 30pt;
+	margin-bottom: 30px;
+}
+.adminForm .blockfield {
+	height: 60px;
+}
+.adminForm label {
+	font-size: 14pt;
+	display: inline-block;
+	width: 180px;
+}
+.adminForm input {
+	height: 40px;
+	width: 300px;
+	border: 1px solid #378786; /*dark teal*/
+	padding-left: 10px;
+}
+.adminForm select {
+	width: 300px;
+	height: 40px;
+	padding: 10px 20px;
+}
+.adminForm textarea {
+	width: 300px;
+	height: 200px;
+}
+.adminForm input[type="submit"] {
+	padding: 10px 20px;
+	width: 200px;
+	border-radius:3px;
+	font-size:16px;
+	border:2px solid #ff8500 /*orange*/;
+	cursor: pointer;
+	height: 55px;
+	margin-top: 15px;
+}
+

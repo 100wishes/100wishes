@@ -1,4 +1,4 @@
-<div id="manageUsers">
+<div id="manageContent">
 	<a class="btn-action" href="index.php?controller=admin&action=add&uID=0">Add a User</a>
 	<h1>List of Users</h1>
 	<?php
@@ -12,4 +12,4 @@
 	<?php
 	}
 	?>
-</div><!--manageUsers-->
+</div><!--manageContent-->
