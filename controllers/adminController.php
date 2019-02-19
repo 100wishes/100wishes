@@ -11,7 +11,7 @@ Class AdminController extends MainController {
 	}
 
 	public function dashboard() {
-		$this->checkUser();
+		// $this->checkUser();
 
 		$content = $this->showview('admin_dashboard');
 		include('templates/admin.php');
@@ -48,7 +48,7 @@ Class AdminController extends MainController {
 	}
 
 	public function users() {
-		$this->checkUser();
+		// $this->checkUser();
 		$hID = $_SESSION["hospitalID"];
 		$adm = $_SESSION["bAdmin"];
 

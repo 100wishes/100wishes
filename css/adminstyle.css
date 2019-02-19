@@ -117,15 +117,244 @@ html {
 	margin-top: 15px;
 }
 
-.msgerror {
-	background: #e60000;
+.errormsg {
+	background: #e60000; /*red*/
 	position: absolute;
-	top: 160px;
+	top: 150px;
 	padding: 15px;
 	width: 400px;
 	text-align: center;
 	color: #fff;
 	font-weight: 700;
-	border: 1px solid #b30000;
+	border: 1px solid #b30000; /*red*/
 	border-radius: 3px;
 }
+
+/*----------NAV---------*/
+
+nav {
+	position: fixed;
+	left: 0;
+	top:0;
+	height: 100%;
+	width: 230px;
+	padding: 30px;
+	border-right: 1px solid #eee;
+	-webkit-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+	-moz-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+	box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+}
+nav img {
+	width: 160px;
+	margin-top: 20px;
+	margin-bottom: 80px;
+}
+nav li, a {
+	font-size: 14pt;
+	font-weight: 600;
+	font-weight: 500;
+	color: #378786; /*dark teal*/
+	margin-bottom: 20px;
+	width: 100%;
+}
+nav a:hover {
+	color: #ff8500; /*orange*/
+}
+
+/*-------------DASHBOARD-----------*/
+
+#welcome {
+	margin-left: 150px;
+	text-align: center;
+}
+#welcome h1 {
+	font-size: 40pt;
+	text-align: center;
+	margin-top: 120px;
+	color: #ff8500; /*orange*/
+}
+#welcome a {
+	color: #000;
+	font-size: 16pt;
+	letter-spacing: 1px;
+}
+#manage {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 50px;
+	width: 500px;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+#manage img {
+	height: 60px;
+	margin-bottom: 20px;
+}
+#manage > div {
+	padding: 40px 20px;
+	border-radius: 10%;
+	-webkit-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+	-moz-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+	box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.56);
+}
+#manage > div:hover {
+	border: 2px solid #ff8500; /*orange*/
+}
+
+
+/*---------USERS-------------*/
+
+.manageContent {
+	position: absolute;
+	left: 300px;
+	top: 100px;
+	width: 100%;
+}
+.manageContent h1 {
+	font-weight: 700;
+	font-size: 30pt;
+	margin-bottom: 30px;
+}
+.btn-action {
+	display: inline-block;
+	width: auto;
+	font-size: 12pt;
+	padding: 8px 15px;
+	border: 2px solid #ff8500; /*orange*/
+	background: #fff;
+	color: #ff8500; /*orange*/
+	font-weight: 600;
+	border-radius:3px;
+	cursor: pointer;
+	position: absolute;
+	margin-left: 180px;
+	margin-top: 5px;
+}
+.btn-action:hover {
+	color: #fff;
+	background: #ff8500; /*orange*/
+}
+.btn-hospital {
+	margin-left: 500px;
+}
+.fa-trash-alt {
+	color: #e60000; /*red*/
+}
+.fa-trash-alt:hover, .fa-edit:hover {
+	color: #000;
+}
+.manageContent p {
+	display: inline-block;
+	margin-left: 10px;
+}
+.manageContent .list, .manageContent li {
+	margin-bottom: 15px;
+}
+.manageContent img {
+	width: 100px;
+	margin-left: 10px;
+	margin-right: 40px;
+}
+.list-wish, .list-hospitalname {
+	width: 280px;
+}
+.list-status {
+	width: 150px;
+	text-align: center;
+}
+.list-hospital {
+	width: 200px;
+	text-align: center;
+}
+.list-name {
+	width: 120px;
+	text-align: center;
+}
+.list-phone {
+	width: 120px;
+	text-align: center;
+}
+.list-email {
+	width: 250px;
+	text-align: center;
+}
+.list-client {
+	width: 200px;
+}
+.list-clientemail {
+	width: 250px;
+}
+
+/*-------------ADD-----------*/
+
+.adminForm {
+	margin-left: -500px;
+	margin-top: 100px;
+}
+.adminForm h1 {
+	font-weight: 700;
+	font-size: 30pt;
+	margin-bottom: 30px;
+}
+.adminForm .blockfield {
+	height: 60px;
+}
+.adminForm .blockfield p {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.adminForm .blockfield p.user-email, .adminForm .blockfield p.user-phone {
+	display: block;
+	margin-left: 180px;
+}
+.adminForm label {
+	font-size: 14pt;
+	display: inline-block;
+	width: 180px;
+}
+.adminForm input {
+	height: 40px;
+	width: 300px;
+	border: 1px solid #378786; /*dark teal*/
+	padding-left: 10px;
+}
+.adminForm select {
+	width: 300px;
+	height: 40px;
+	padding: 10px 20px;
+	border: 1px solid #378786; /*dark teal*/
+}
+.adminForm input[type="submit"] {
+	padding: 10px 20px;
+	width: 200px;
+	border-radius:3px;
+	font-size:16px;
+	border: 2px solid #ff8500 /*orange*/;
+	cursor: pointer;
+	height: 55px;
+	margin-top: 50px;
+}
+.adminForm textarea {
+	border: 1px solid #378786; /*dark teal*/
+	width: 300px;
+	height: 150px;
+	padding: 10px;
+}
+#hospForm {
+	padding-bottom: 100px;
+}
+input[type="file"] {
+	border: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.blockfield.bio {
+	height: 170px;
+}
+
+
+/*----------------EDIT WISH-----------------*/
+
+
+
+
