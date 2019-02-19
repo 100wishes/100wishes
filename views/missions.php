@@ -33,7 +33,7 @@
 				</div>
 				<p><?=$mission['hospName']?></p>
 
-				<a href="#" data-id="<?=$mission['wID']?>" data-wish="<?=$mission['strWish']?>" data-hospital="<?=$mission['hospName']?>" data-hospid="<?=$mission['hID']?>" class="fulfillBtn">Fulfill</a>
+				<a href="#" data-id="<?=$mission['wID']?>" data-wish="<?=$mission['strWish']?>" data-hospital="<?=$mission['hospName']?>" data-hospid="<?=$mission['hID']?>" class="fulfillBtn fulfill">Fulfill</a>
 			</div><!--//wish-->
 <?php
 			$arrNb += $a;
