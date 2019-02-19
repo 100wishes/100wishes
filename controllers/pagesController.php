@@ -110,6 +110,7 @@ Class PagesController extends MainController {
 		$this->checkClient();
 		$arrData['nav'] = MainNav::makeNav();
 		$arrData['page'] = GetPage::getPageInfo($pID);
+		$arrData['client'] = GetUsers::getOneClient($_SESSION["arrClient"])[0];
 
 		$content = $this->showview('profile', $arrData);
 		include('templates/pages.php');
