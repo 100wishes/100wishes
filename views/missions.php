@@ -49,8 +49,6 @@
 
 				<form method="post" action="" class="bForm">
 				<?php
-				$_SESSION['arrClient'] = 3;
-
 					if(!isset($_SESSION['arrClient']) || empty($_SESSION['arrClient'])){
 						echo '<a href="index.php?controller=pages&action=login">Please, log in</a>';
 					} else {

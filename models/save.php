@@ -17,7 +17,7 @@ Class Save {
 					strCity = '".addslashes($_POST['strCity'])."',
 					strPassword = '".$pass."'
 				WHERE id = ".$cID;
-		return DBFactory::newData()->runSql("getData", $sql);
+		DBFactory::newData()->runSql("getData", $sql);
 	}
 
 	static function saveUser($uID) {
@@ -43,7 +43,7 @@ Class Save {
 					    '".addslashes($_POST['nPhone'])."',
 					    ".$_POST['nHospitalID'].")";
 
-			return DBFactory::newData()->runSql("saveData", $sql);
+			DBFactory::newData()->runSql("saveData", $sql);
 		} else {
 			$sql = "UPDATE users_cms
 					SET 
@@ -54,7 +54,7 @@ Class Save {
 						strPassword = '".$pass."'
 					WHERE id = ".$uID;
 
-			return DBFactory::newData()->runSql("getData", $sql);
+			DBFactory::newData()->runSql("getData", $sql);
 		}
 	}
 
@@ -89,7 +89,7 @@ Class Save {
 					    '".$_POST['nProvinceID']."',
 					    '".addslashes($_POST['strPostalCode'])."')";
 
-			return DBFactory::newData()->runSql("saveData", $sql);
+			DBFactory::newData()->runSql("saveData", $sql);
 		} else {
 			$sql = "UPDATE hospitals
 					SET 
@@ -105,7 +105,7 @@ Class Save {
 						strPostalCode = '".addslashes($_POST['strPostalCode'])."'
 					WHERE id = ".$hID;
 
-			return DBFactory::newData()->runSql("getData", $sql);
+			DBFactory::newData()->runSql("getData", $sql);
 		}
 	}
 
@@ -122,14 +122,14 @@ Class Save {
 						'".$_SESSION["hospitalID"]."',
 						'0')";
 
-			return DBFactory::newData()->runSql("saveData", $sql);
+			DBFactory::newData()->runSql("saveData", $sql);
 		} else {
 			$sql = "UPDATE wishes
 					SET 
 						nStatusID = '".$_POST['nStatusID']."'
 					WHERE id = ".$wID;
 
-			return DBFactory::newData()->runSql("getData", $sql);
+			DBFactory::newData()->runSql("getData", $sql);
 		}
 	}
 }

@@ -144,6 +144,7 @@ Class AdminController extends MainController {
 		if(isset($_GET['wID'])) {
 			Save::saveWish($_GET['wID']);
 			header("location: index.php?controller=admin&action=wishes&save=true");
+			Count::countUserWish();
 		}
 	}
 }

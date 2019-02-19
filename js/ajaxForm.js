@@ -147,4 +147,37 @@ $(function(){
 		}
 	return false;
 	});
+
+	$("#btn-updateClientSiteForm").on("click", function(){
+		$validation = validateForm();
+		if($validation == true)
+		{
+			$.ajax(
+			{	
+				url: "models/updateUser.php",
+				method: "POST",	
+				data: 
+				{
+					strEmail: $("#email").val(),
+					strPassword: $("#password").val(),
+					strPastPassword: $("#pastpassword").val(),
+					strFirstName: $("#firstName").val(),
+					strLastName: $("#lastName").val(),
+					nPhone: $("#phone").val(),
+					nProvinceID: $("#province").val(),
+					strCity: $("#city").val(),
+					id: $("#id").val()
+				},				
+				success: (result) =>
+				{
+					window.location = "index.php?controller=pages&action=profile";
+				},
+				error: (a, b, error) =>
+				{
+					console.log(error);
+				}
+			});
+		}
+	return false;
+	});
 });

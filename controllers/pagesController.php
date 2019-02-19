@@ -121,9 +121,16 @@ Class PagesController extends MainController {
 		$this->checkClient();
 		$arrData['nav'] = MainNav::makeNav();
 		$arrData['page'] = GetPage::getPageInfo($pID);
+		$arrData['provinces'] = GetProvince::showProvinces();
+		$arrData['client'] = GetUsers::getOneClient($_SESSION["arrClient"])[0];
 
 		$content = $this->showview('editprofile', $arrData);
 		include('templates/pages.php');
+	}
+
+	public function logoutSite() {
+		$this->logout();
+		header("location: index.php?controller=pages&action=login");
 	}
 }
 ?> 

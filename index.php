@@ -14,6 +14,7 @@ include("models/getUsers.php");
 include("models/getProvince.php");
 include("models/delete.php");
 include("models/save.php");
+include("models/countWishPerUser.php");
 
 session_start();
 

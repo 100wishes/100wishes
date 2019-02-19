@@ -9,31 +9,43 @@
 	<div class="signUpDetails">
 		<h3>Edit Profile</h3>
 		<div class="editProfile">
-			<form method="post" action="saveContact.php" onsubmit="return validateForm()">
-				<label>First Name</label>
-				<input type="text" name="strFirstName" class="requiredField" id="strFirstName">
+			<form id="clientSiteForm" method="post" action="">
+				<input type="hidden" id="id" name="id" value="<?=$_SESSION["arrClient"]?>" />
 
-				<label>Last Name</label>
-				<input type="text" name="strLastName" class="requiredField" id="strLastName">
-				
-				<label>Email Address</label>
-				<input type="text" name="strEmail" class="requiredField" id="strEmail">
+				<label>First Name:</label>
+				<input class="required" type="text" id="firstName" name="strFirstName" value="<?=$arrData['client']['strFirstName']?>" />
 
-				<label>Password</label>
-				<input type="text" name="strPassword" class="requiredField" id="strPassword">
+				<label>Last Name:</label>
+				<input class="required" type="text" id="lastName" name="strLastName" value="<?=$arrData['client']['strLastName']?>" />
 
-				<label>Phone Number</label>
-				<input type="text" name="nPhone" class="requiredField" id="nPhone">
+				<label>E-mail:</label>
+				<input class="required" type="email" id="email" name="strEmail" value="<?=$arrData['client']['strEmail']?>" />
 
-				<label>City</label>
-				<input type="text" name="strCity" class="requiredField" id="strCity">
+				<label>Password:</label>
+				<input type="password" id="password" name="strPassword" />
+				<input type="hidden" id="pastpassword" name="strPastPassword" value="<?=$arrData['client']['strPassword']?>" />
 
-				<label>Province</label>
-				<input type="text" name="nProvinceID" class="requiredField" id="nProvinceID">
+				<label>Phone Number:</label>
+				<input type="text" class="required" id="phone" name="nPhone" value="<?=$arrData['client']['nPhone']?>" />
 
-				<input type="submit" value="Save Changes" class="completeBtn"> 
-				<a href="#" class="btn-primary-reverse">Cancel</a>
+				<label>City:</label>
+				<input type="text" class="required" id="city" name="strCity" value="<?=$arrData['client']['strCity']?>" />
+
+				<label>Province:</label>
+				<select id="province" name="nProvinceID">
+				<?php
+					foreach ($arrData['provinces'] as $province) {
+					$selected = $arrData['client']['nProvinceID'] == $province['id']?"selected":"";
+				?>
+					<option value="<?=$province["id"]?>" <?=$selected?>><?=$province["strName"]?></option>
+				<?php
+					}
+				?>
+				</select>
+
+				<input id="btn-updateClientSiteForm" type="submit" value="Save Changes" class="completeBtn"> 
+				<a href="index.php?controller=pages&action=profile" class="btn-primary-reverse">Cancel</a>
 			</form>
-		</div><!--editProfile-->	
+		</div><!--signUpForm-->	
 	</div><!--signUpDetails-->
-</div><!--editProfileContainer-->
+</div><!--signUpContainer-->
