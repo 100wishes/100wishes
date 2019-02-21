@@ -789,7 +789,7 @@ p.introHeading {
 	padding-left:100px;
 }
 
-.loginForm input[type='text'], .signUpForm input[type='text'], .editProfile input[type='text'] {
+.loginForm input[type='text'], .loginForm input[type='password'], .editProfile input[type='text'], .editProfile input[type='email'], .editProfile input[type='password'], .signUpForm input[type='text'], .signUpForm input[type='email'], .signUpForm input[type='password'] {
 	width:100%;
 	margin-bottom:30px;
 	max-width:100%;
@@ -798,7 +798,7 @@ p.introHeading {
 	border-bottom:2px solid #378786 /*dark teal*/;
 }
 
-.loginForm input[type='text'] {
+.loginForm input[type='text'], .loginForm input[type='password'] {
 	border-bottom:2px solid #ff8500 /*orange*/;
 	color:#ff8500 /*orange*/;
 }
@@ -808,6 +808,12 @@ p.introHeading {
 	display:block;
 	margin-top:20px;
 	font-weight:600;
+}
+
+.editProfile #province, .signUpForm #province {
+	display: block;
+	margin-bottom:20px;
+	margin-top:10px;
 }
 
 .loginForm label {
@@ -986,7 +992,7 @@ p.introHeading {
 
 #profile {
 	margin: 0 auto;
-	margin-top: 30px;
+	margin-top: 50px;
 	height: 400px;
 	width: 600px;
 	max-width: 100%;
@@ -999,6 +1005,7 @@ p.introHeading {
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 200px;
+	max-width: 100%;
 	height: 200px;
 	float: left;
 	display: inline-block;
@@ -1067,6 +1074,42 @@ p.introHeading {
 .profile-info div:first-child {
 	margin-bottom: 30px;
 }
+
+@media only screen and (max-width:930px) {
+	#profile {
+		width:100%;
+		height: 100%;
+		margin-bottom: 50px;
+	}
+
+	.profile-info {
+		float: none;
+		display: block;
+		margin-left: 0;
+		width:350px;
+		max-width: 100%;
+		margin:auto;
+		margin-top:30px;
+	}
+
+	.profile-pic {
+		float:none;
+		display: block;
+		margin:auto;
+	}
+}
+
+@media only screen and (max-width:600px) {
+	#profile {
+		width:80%;
+	}
+
+	.editProfile .btn-primary-reverse, .editProfile .completeBtn, .signUpForm .completeBtn {
+		padding:5px;
+		font-size:14px;
+	}
+}
+
 
 
 /*-- End of Profile --*/
@@ -1521,6 +1564,21 @@ p.location {
 
 #thankyou p {
 	color: #000;
+	margin-bottom:30px;
 }
+
+#modal a.please-log-in {
+	font-size:24px;
+	font-weight: 600;
+	border-bottom: 3px solid #378786; /*dark teal*/
+
+}
+
+#modal a.please-log-in:hover {
+	color:#ff8500 /*orange*/;
+	border-bottom:3px solid #ff8500 /*orange*/;
+}
+
+
 
 /*--End of Thank You--*/

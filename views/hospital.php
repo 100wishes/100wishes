@@ -52,16 +52,16 @@ if($arrData['wishes']) {
 }
 ?>
 	<div id="modal">
+		<?php
+			if(!isset($_SESSION['arrClient']) || empty($_SESSION['arrClient'])){
+				echo '<a href="index.php?controller=pages&action=login" class="please-log-in">Please log in to fullfill this wish!</a>';
+			} else {
+		?>
 		<section id="booking">
 			<div id="bookingForm">
 				<img src="images/booking.jpg" alt="wish league"/>
-
 				<form method="post" action="" class="bForm">
-				<?php
-					if(!isset($_SESSION['arrClient']) || empty($_SESSION['arrClient'])){
-						echo '<a href="index.php?controller=pages&action=login">Please, log in</a>';
-					} else {
-				?>
+				
 					<input type="hidden" id="user" name="nUserID" value="<?=$_SESSION['arrClient']?>" />
 
 					<div class="selectedWish">
