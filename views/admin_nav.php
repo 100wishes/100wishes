@@ -5,14 +5,29 @@
 		<li><a href="index.php?controller=admin&action=users">Users</a></li>
 		<li><a href="index.php?controller=admin&action=wishes">Wishes</a></li>
 
-		<!-- insert php code if bAdmin === 1 -->
+		<?php
+			if($_SESSION["bAdmin"] == 1) {
+		?>
 	
 		<li><a href="index.php?controller=admin&action=hospitals">Hospitals</a></li>
 		<li><a href="index.php?controller=admin&action=clients">Clients</a></li>
 
-		<!-- insert php code if bAdmin !=1 -->
+
+
+		<?php
+		}
+		?>
+
+		<?php
+			if($_SESSION["bAdmin"] != 1) {
+		?>
 
 		<li><a href="index.php?controller=admin&action=hospital">Settings</a></li>
+
+		<?php
+		}
+		?>
+
 		<li><a href="index.php?controller=admin&action=cmsLogout">Logout</a></li>
 
 	</ul>
