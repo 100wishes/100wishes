@@ -79,7 +79,6 @@ Class PagesController extends MainController {
 	public function addMission() {
 		$oMission = new Mission();
 		$oMission-> addToMission($_GET['wID']);
-
 		header("location: index.php?controller=pages&action=mission");
 	}
 
@@ -133,4 +132,4 @@ Class PagesController extends MainController {
 		header("location: index.php?controller=pages&action=login");
 	}
 }
-?> 
+?>

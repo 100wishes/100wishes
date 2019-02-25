@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include('../../connect_wishleague.php');
 include("libs/DBFactory.php");
 include("libs/Mission.php");
@@ -15,8 +17,6 @@ include("models/getProvince.php");
 include("models/delete.php");
 include("models/save.php");
 include("models/countWishPerUser.php");
-
-session_start();
 
 $controller = (isset($_GET["controller"]))?$_GET["controller"]:"pages";
 $action = (isset($_GET["action"]))?$_GET["action"]:"home";

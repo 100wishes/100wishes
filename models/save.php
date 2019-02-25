@@ -17,7 +17,7 @@ Class Save {
 					strCity = '".addslashes($_POST['strCity'])."',
 					strPassword = '".$pass."'
 				WHERE id = ".$cID;
-		DBFactory::newData()->runSql("getData", $sql);
+		DBFactory::newData()->runSql("saveData", $sql);
 	}
 
 	static function saveUser($uID) {
@@ -54,7 +54,7 @@ Class Save {
 						strPassword = '".$pass."'
 					WHERE id = ".$uID;
 
-			DBFactory::newData()->runSql("getData", $sql);
+			DBFactory::newData()->runSql("saveData", $sql);
 		}
 	}
 
@@ -105,7 +105,7 @@ Class Save {
 						strPostalCode = '".addslashes($_POST['strPostalCode'])."'
 					WHERE id = ".$hID;
 
-			DBFactory::newData()->runSql("getData", $sql);
+			DBFactory::newData()->runSql("saveData", $sql);
 		}
 	}
 
@@ -129,7 +129,7 @@ Class Save {
 						nStatusID = '".$_POST['nStatusID']."'
 					WHERE id = ".$wID;
 
-			DBFactory::newData()->runSql("getData", $sql);
+			DBFactory::newData()->runSql("saveData", $sql);
 		}
 	}
 }
