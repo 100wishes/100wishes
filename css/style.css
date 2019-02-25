@@ -1427,6 +1427,12 @@ p.location {
 	display: none;
 }
 
+#modal.wishesContainer {
+	width: 1000px;
+	margin-top: 25px;
+	margin-bottom: 0;
+}
+
 #booking {
 	margin: 0 auto;
 	width: 880px;
