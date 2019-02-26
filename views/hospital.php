@@ -59,7 +59,7 @@ if($arrData['wishes']) {
 		?>
 		<section id="booking">
 			<div id="bookingForm">
-				<img src="images/booking.jpg" alt="wish league"/>
+				<img class="hospitalModal" src="images/booking.jpg" alt="wish league"/>
 				<form method="post" action="" class="bForm">
 				
 					<input type="hidden" id="user" name="nUserID" value="<?=$_SESSION['arrClient']?>" />
