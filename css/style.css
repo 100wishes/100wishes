@@ -292,40 +292,88 @@ footer #socialNav .fab:hover {
 		font-size:12px;
 	}
 
-	.headerIcons > * {
+
+}
+
+
+/*-- Mobile Nav --*/
+#mobileNav {
+	display: block; 
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	right:-100vw;
+	height: 480px; 
+	background: #fff; 
+	text-align: center; 
+	padding-top:30px;
+	z-index:1;
+	box-shadow:0px 0px 5px 1px #378786; /*dark teal*/;
+}
+
+#mobileNav .iconStar {
+	width:50px;
+	padding-bottom:30px;
+}
+
+#mobileNav li{
+	padding:10px;
+}
+
+#mobileNav li a:hover {
+	color:#ff8500 /*orange*/
+}
+
+#iconNav {
+	display: none;
+	position: absolute; 
+	right: 30px; 
+	top: 40px;
+}
+
+#iconNav img{
+	width: 20px; 
+}
+
+#iconNav img:hover {
+	opacity: 0.5;
+}
+
+#iconClose {
+	display: block;
+	margin:auto;
+}
+
+#mobileNav #iconClose img{
+	width:30px;
+	margin-top:20px;
+}
+
+
+
+@media only screen and (max-width: 630px) {
+   #iconNav {
+   		display: block;
+   }
+
+    .primaryNav, .headerIcons {
+   		display: none;
+   }
+
+
+	nav > * {
 		float:none;
 	}
 
-	.headerIcons img {
-		width:15px;
-	}
-
-	.iconMissions {
-		margin-right:0px;
-	}
-
-	.iconMissionsImg {
-		position: relative;
-		top:5px;
-	}
-
-	.iconProfileImg {
-		margin-top:5px;
-		top:5px;
-		position: relative;
-	}
-
-	.headerIcons {
-		padding-top:8px;
+	nav li {
+		display: block;
 	}
 
 }
 
-/*-- Start of Home --*/
 
-/*#home {
-	height: 1100px;
-}*/
+
+/*-- Start of Home --*/
 
 .homeHero {
 	background-image:url("../images/homeHero.png");
@@ -562,11 +610,7 @@ p.introHeading {
 	color: #fff;
 }
 
-@media only screen and (max-width:930px){
-	#smallHero {
-		margin-top:100px;
-	}
-
+@media only screen and (max-width:1100px){
 	#smallHero img {
 		height: 150px;
 	}
@@ -577,7 +621,13 @@ p.introHeading {
 	}
 }
 
-@media only screen and (max-width:800px){
+@media only screen and (max-width:930px){
+	#smallHero {
+		margin-top:100px;
+	}
+}
+
+@media only screen and (max-width:850px){
 	#smallHero img {
 		height: 90px;
 	}
@@ -586,6 +636,16 @@ p.introHeading {
 		font-size:20pt;
 		top:30px;
 		left:30px;
+	}
+}
+
+@media only screen and (max-width:600px){
+	#smallHero img {
+		height: 70px;
+	}
+
+	#smallHero h2 {
+		top:20px;
 	}
 }
 
