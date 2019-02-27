@@ -3,7 +3,7 @@
 <?php
 	foreach($arrData['nav'] as $nav) {
 ?>
-		<li><a href="index.php?controler=pages&amp;action=<?=strtolower($nav['strNav'])?>"><?=$nav['strNav']?></a></li>
+		<li><a href="index.php?controler=pages&amp;action=<?=strtolower($nav['strNav'])?>" class="primaryNav"><?=$nav['strNav']?></a></li>
 <?php
 	}
 ?>

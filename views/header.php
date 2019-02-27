@@ -15,6 +15,7 @@
 				<img src="images/logo.svg">
 			</a>
 		</div><!--logo-->
+
 	<?php
 		include('views/nav.php');
 	?>
@@ -30,4 +31,27 @@
 				Profile</a>
 			</span><!--iconProfile-->
 		</div><!--headerIcons-->
+
+		<div id="iconNav">
+		<a href="#"><img src="images/iconNav.png" alt="iconNav"></a>
+		</div><!--iconNav-->
 	</header>
+
+	<nav id="mobileNav">
+	<img src="images/iconStar.png" alt="iconStar" class="iconStar">
+	<ul>
+		<li><a href="index.php">Home</a></li>
+		<li><a href="index.php?controller=pages&amp;action=hospitals">Hospitals</a></li>
+		<li><a href="index.php?controller=pages&amp;action=about">About</a></li>
+		<li><a href="index.php?controller=pages&amp;action=contact">Contact</a></li>
+		<li><a href="index.php?controller=pages&amp;action=policies">Policies</a></li>
+		<li><a href="index.php?controller=pages&amp;action=mission">Missions</a></li>
+		<li><a href="index.php?controller=pages&amp;action=profile">Profile</a></li>
+	</ul>
+		
+	<div id="iconClose">
+		<a href="#">
+		<img src="images/iconClose.png" alt="iconClose">
+		</a>
+	</div><!--iconClose-->
+</nav><!--mobileNav-->

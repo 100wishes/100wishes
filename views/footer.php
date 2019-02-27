@@ -35,5 +35,7 @@
 	<script src="js/openModal.js"></script> 
 	<!-- //open modal box for booking -->
 
+	<script src="js/mobileNav.js"></script>
+	<!-- //mbile nav -->
 </body>
 </html>
