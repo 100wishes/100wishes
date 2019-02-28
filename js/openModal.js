@@ -18,3 +18,7 @@ for(var i = 0; i < arrFulfill.length; i++) {
 		event.preventDefault();
 	});
 }
+
+document.getElementById('close-modal').addEventListener('click', function() {
+	location.reload();
+});

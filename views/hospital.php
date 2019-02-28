@@ -105,6 +105,6 @@ if($arrData['wishes']) {
 	<div id="thankyou">
 		<h2>Thank You! Message sent!</h2>
 		<p>Thank you for your message. We will get back to you as soon as possible.</p>
-		<a class="btn-primary-reverse" href="index.php?controller=pages&action=deleteMission&wish=<?=($arrNb)-1?>">Close</a>
+		<a id="close-modal" class="btn-primary-reverse" href="#">Close</a>
 	</div><!--thankyou-->
 </div><!--wishesContainer-->
